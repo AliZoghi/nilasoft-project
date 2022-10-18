@@ -1,0 +1,31 @@
+.hero {
+    background-color: var(--primary-color-normal);
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+    &__description {
+        flex: 5;
+        h1 {
+            font-size: var(--font-size-biggest-heading);
+            padding-block-end: 0.5rem;
+            color: var(--gray-color-lighest);
+        }
+        p {
+            color: var(--primary-color-light);
+            font-size: var(--font-size-sub-heading);
+            line-height: 1.5;
+            padding-bottom: 2rem;
+        }
+    }
+    &__image {
+        flex: 8;
+
+        display: flex;
+        justify-content: end;
+        img {
+            height: 100%;
+        }
+    }
+}
