@@ -1,5 +1,4 @@
 import {Component, Input} from '@angular/core';
-import {DynamicIconOptions} from '../../../models/DynamicIconOptions.interface';
 
 @Component({
     selector: 'app-dynamic-icon',
