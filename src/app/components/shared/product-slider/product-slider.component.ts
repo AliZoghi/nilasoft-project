@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnDestroy, ViewChild} from '@angular/core';
 import {ProductItem, ProductItemFake} from '../../../models/ProductItem.interface';
 
 @Component({
@@ -6,66 +6,97 @@ import {ProductItem, ProductItemFake} from '../../../models/ProductItem.interfac
     templateUrl: './product-slider.component.html',
     styleUrls: ['./product-slider.component.scss'],
 })
-export class ProductSliderComponent implements AfterViewInit {
+export class ProductSliderComponent implements AfterViewInit, OnDestroy {
     public productItems: ProductItem[] = ProductItemFake;
+    private readonly INTERVAL_DELAY: number = 4_000;
+    private interval!: number;
     @ViewChild('slider') public sliderContainer!: ElementRef;
 
     public ngAfterViewInit(): void {
-        let isDown = false;
-        let startX: number;
-        let scrollLeft: number;
-        let gutter: number;
-        const slider = this.sliderContainer.nativeElement;
-        console.log(slider);
-        const end = (): void => {
-            isDown = false;
-            const extraStep = slider.scrollLeft % gutter;
-            if (extraStep > gutter / 2) {
-                slider.scrollLeft = slider.scrollLeft - extraStep + gutter;
-            } else {
-                console.log('salam2');
-                slider.scrollLeft = slider.scrollLeft - extraStep;
-            }
-        };
-
-        const start = (e: any): void => {
-            gutter = this.calculateSpaceOfBetweenCards();
-            isDown = true;
-            console.log(isDown);
-            startX = e.pageX;
-            console.log(startX);
-            scrollLeft = slider.scrollLeft;
-            console.log(scrollLeft);
-            console.log('------');
-        };
-
-        const move = (e: any): void => {
-            if (!isDown) return;
-
-            e.preventDefault();
-            const x = e.pageX;
-            const dist = x - startX;
-            slider.scrollLeft = scrollLeft - dist;
-        };
-
-        slider.addEventListener('mousedown', start);
-        slider.addEventListener('mousemove', move);
-        slider.addEventListener('mouseup', end);
+        this.draggableSlider();
+        this.resetSliderInterval();
     }
 
-    public scrollFunction(goRight: -1 | 1): void {
-        const space = this.calculateSpaceOfBetweenCards() * goRight;
+    public scrollFunction(goRight: 1 | -1): void {
+        const slider = this.sliderContainer.nativeElement;
+        const step = this.calculateSpaceOfBetweenCards() * goRight;
+        let scrollValue = slider.scrollLeft + step;
 
-        this.sliderContainer.nativeElement.scrollTo({
-            left: this.sliderContainer.nativeElement.scrollLeft + space,
+        // Last card AND Click on right-button
+        if (slider.scrollWidth - slider.clientWidth === slider.scrollLeft && goRight === 1) {
+            scrollValue = 0;
+        }
+        // First card AND Click on left-button
+        else if (slider.scrollLeft === 0 && goRight === -1) {
+            scrollValue = slider.scrollWidth - slider.clientWidth;
+        }
+
+        slider.scrollTo({
+            left: scrollValue,
             behavior: 'smooth',
         });
+
+        this.resetSliderInterval();
     }
 
     private calculateSpaceOfBetweenCards(): number {
         const gapValue = parseInt(getComputedStyle(this.sliderContainer.nativeElement).getPropertyValue('gap'));
         const cardWidth = this.sliderContainer.nativeElement.querySelector('app-product-card').clientWidth;
-
         return cardWidth + gapValue;
+    }
+
+    private draggableSlider(): void {
+        const slider = this.sliderContainer.nativeElement;
+        let mouseIsDown = false;
+        let startX: number;
+        let scrollLeft: number;
+
+        const dropSlider = (): void => {
+            mouseIsDown = false;
+            const cardWidth = this.calculateSpaceOfBetweenCards();
+            const extraStep = slider.scrollLeft % cardWidth;
+            let scrollValue = slider.scrollLeft - extraStep;
+            if (extraStep > cardWidth / 2) {
+                scrollValue += cardWidth;
+            }
+
+            slider.scrollTo({
+                left: scrollValue,
+                behavior: 'smooth',
+            });
+
+            this.resetSliderInterval();
+        };
+
+        const dragSlider = (e: any): void => {
+            mouseIsDown = true;
+            startX = e.pageX;
+            scrollLeft = slider.scrollLeft;
+        };
+
+        const moveSlider = (e: any): void => {
+            if (!mouseIsDown) return;
+
+            e.preventDefault();
+            const endX = e.pageX;
+            const dist = endX - startX;
+            slider.scrollLeft = scrollLeft - dist;
+        };
+
+        slider.addEventListener('mousedown', dragSlider);
+        slider.addEventListener('mousemove', moveSlider);
+        slider.addEventListener('mouseup', dropSlider);
+    }
+
+    private resetSliderInterval(): void {
+        clearInterval(this.interval);
+
+        this.interval = setInterval(() => {
+            this.scrollFunction(1);
+        }, this.INTERVAL_DELAY);
+    }
+
+    public ngOnDestroy(): void {
+        clearInterval(this.interval);
     }
 }
