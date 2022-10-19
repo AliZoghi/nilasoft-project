@@ -1,0 +1,9 @@
+<a
+    class="button no-select"
+    [style.--color]="options.color"
+    [style.--backgroundColor]="options.backgroundColor"
+    [style.--colorHover]="options.colorHover || options.color"
+    [style.--backgroundHoverColor]="options.backgroundHoverColor || options.backgroundColor"
+    [style.--borderColor]="options.borderColor || options.backgroundHoverColor || options.backgroundColor"
+    >{{ options.label }}</a
+>

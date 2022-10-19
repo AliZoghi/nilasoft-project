@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {LandingModule} from './pages/landing/landing.module';
+import {SharedModule} from './components/shared/shared.module';
 
 @NgModule({
     declarations: [AppComponent, NavbarComponent, FooterComponent],

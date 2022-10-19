@@ -1,0 +1,30 @@
+@mixin create-button-style($color, $bgColor, $borderColor) {
+    color: $color;
+    background-color: $bgColor;
+    border: 1px solid $borderColor;
+}
+@mixin create-button-hover-style($colorHover, $backgroundHoverColor) {
+    color: $colorHover;
+    background-color: $backgroundHoverColor;
+}
+
+.button {
+    @include create-button-style(var(--color), var(--backgroundColor), var(--borderColor));
+    display: inline-block;
+    padding: 1.6rem 2rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    width: 100%;
+    text-transform: capitalize;
+
+    transition: 300ms ease;
+    transition-property: box-shadow, color, background-color;
+
+    &:active {
+        box-shadow: var(--button-box-shadow);
+        @include create-button-hover-style(var(--colorHover), var(--backgroundHoverColor));
+    }
+    &:hover {
+        @include create-button-hover-style(var(--colorHover), var(--backgroundHoverColor));
+    }
+}

@@ -10,14 +10,18 @@
         h1 {
             font-size: var(--font-size-biggest-heading);
             padding-block-end: 0.5rem;
-            color: var(--gray-color-lighest);
+            color: var(--gray-color-lightest);
         }
         p {
             color: var(--primary-color-light);
             font-size: var(--font-size-sub-heading);
-            line-height: 1.5;
-            padding-bottom: 2rem;
+            line-height: 1.6;
+            padding-block-end: 2.4rem;
         }
+    }
+    &__buttons {
+        display: flex;
+        gap: 0.5rem;
     }
     &__image {
         flex: 8;
