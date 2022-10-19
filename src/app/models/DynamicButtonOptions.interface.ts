@@ -1,7 +1,7 @@
 export interface DynamicButtonOptions {
-    color?: string;
+    color: string;
     colorHover?: string;
-    backgroundColor?: string;
+    backgroundColor: string;
     backgroundHoverColor?: string;
     borderColor?: string;
     label: string;

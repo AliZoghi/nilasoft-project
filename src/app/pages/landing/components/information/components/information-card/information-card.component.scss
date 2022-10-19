@@ -1,0 +1,18 @@
+.information {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    &__icon {
+        width: 16px;
+        height: 16px;
+    }
+    &__description {
+        h4 {
+            color: var(--primary-color-darker);
+            font-size: var(--font-size-quaternery);
+        }
+        p {
+            color: var(--gray-color-darker);
+        }
+    }
+}
