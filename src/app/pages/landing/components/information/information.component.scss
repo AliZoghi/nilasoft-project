@@ -3,5 +3,7 @@
     box-shadow: var(--box-shadow-down);
     padding-block: 2.4rem;
     &__container {
+        display: flex;
+        justify-content: space-between;
     }
 }
