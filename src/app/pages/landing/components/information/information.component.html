@@ -1,5 +1,7 @@
-<div class="container information__container">
-    <ng-container *ngFor="let dataCard of dataCards">
-        <app-information-card [dataCard]="dataCard"></app-information-card>
-    </ng-container>
+<div class="information">
+    <div class="container information__container">
+        <ng-container *ngFor="let dataCard of dataCards">
+            <app-information-card [dataCard]="dataCard"></app-information-card>
+        </ng-container>
+    </div>
 </div>

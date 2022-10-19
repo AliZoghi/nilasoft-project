@@ -1,7 +1,11 @@
 <div class="information">
-    <div class="information__icon">
-        <i [class]="'fa-regular fa-' + dataCard.iconType"></i>
-    </div>
+    <app-dynamic-icon
+        [iconHaveCircleBg]="true"
+        [iconShape]="dataCard.iconType"
+        iconColor="var(--secondary-color-dark)"
+        iconBackgroundColor="var(--secondary-color-light)"
+        iconSize="1.6rem"
+    ></app-dynamic-icon>
     <div class="information__description">
         <h4>{{ dataCard.title }}</h4>
         <p>{{ dataCard.description }}</p>
