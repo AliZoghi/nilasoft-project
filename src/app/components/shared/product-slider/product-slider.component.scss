@@ -12,6 +12,7 @@
         position: relative;
     }
     &__cards {
+        padding-block: 2rem;
         overflow: hidden;
         display: flex;
         gap: var(--gap);
@@ -21,20 +22,17 @@
         }
     }
     &__buttons {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        &-prev {
-            margin-left: -6rem;
+        & > * {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             cursor: pointer;
         }
+        &-prev {
+            left: -6rem;
+        }
         &-next {
-            margin-right: -6rem;
-            cursor: pointer;
+            right: -6rem;
         }
     }
 }
