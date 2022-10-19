@@ -1,6 +1,31 @@
-<div class="product">
-    <div class="product__container container">
-        <h2>harchi</h2>
-        <app-product-card [productItem]="productItems[0]"></app-product-card>
+<div class="product container">
+    <h2>Recommended to you</h2>
+    <div class="product__container">
+        <div class="product__cards">
+            <ng-container *ngFor="let productItem of productItems">
+                <app-product-card [productItem]="productItem"></app-product-card>
+            </ng-container>
+        </div>
+
+        <div class="product__buttons">
+            <div class="product__buttons-prev">
+                <app-dynamic-icon
+                    iconShape="angle-left"
+                    iconBackgroundColor="var(--gray-color-lightest)"
+                    iconColor="var(--gray-color-dark)"
+                    iconSize="1.8rem"
+                    [iconHaveCircleBg]="true"
+                ></app-dynamic-icon>
+            </div>
+            <div class="product__buttons-next">
+                <app-dynamic-icon
+                    iconShape="angle-right"
+                    iconBackgroundColor="var(--gray-color-lightest)"
+                    iconColor="var(--gray-color-dark)"
+                    iconSize="1.8rem"
+                    [iconHaveCircleBg]="true"
+                ></app-dynamic-icon>
+            </div>
+        </div>
     </div>
 </div>
