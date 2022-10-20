@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    gap: 0.25rem;
+    text-transform: capitalize;
+    .level-svg {
+        width: var(--size);
+        height: var(--size);
+        & rect {
+            fill: var(--emptyColor);
+            &.active {
+                fill: var(--fillColor);
+            }
+        }
+    }
+}

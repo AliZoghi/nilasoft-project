@@ -6,10 +6,11 @@ import {AppComponent} from './app.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {LandingModule} from './pages/landing/landing.module';
+import {ConvertTimeModule} from './pipes/convert-time/convert-time.module';
 
 @NgModule({
     declarations: [AppComponent, NavbarComponent, FooterComponent],
-    imports: [BrowserModule, AppRoutingModule, LandingModule],
+    imports: [BrowserModule, AppRoutingModule, LandingModule, ConvertTimeModule],
     providers: [],
     bootstrap: [AppComponent],
 })

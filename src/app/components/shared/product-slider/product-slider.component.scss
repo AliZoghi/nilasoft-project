@@ -1,0 +1,37 @@
+.product {
+    margin-block: 6rem;
+    --count-row: 4;
+    --gap: 4rem;
+
+    h2 {
+        color: var(--primary-color-darker);
+        font-size: var(--font-size-heading);
+    }
+    &__container {
+        position: relative;
+    }
+    &__cards {
+        padding-block: 2.4rem;
+        overflow: hidden;
+        display: flex;
+        gap: var(--gap);
+        & > * {
+            flex-shrink: 0;
+            flex-basis: calc((100% / var(--count-row)) - (((var(--count-row) - 1) * var(--gap)) / var(--count-row)));
+        }
+    }
+    &__buttons {
+        & > * {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        &-prev {
+            left: -5rem;
+        }
+        &-next {
+            right: -5rem;
+        }
+    }
+}

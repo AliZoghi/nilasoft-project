@@ -1,0 +1,43 @@
+<div class="product container">
+    <h2>Recommended to you</h2>
+    <div class="product__container">
+        <div class="product__cards" #slider>
+            <ng-container *ngFor="let productItem of productItems">
+                <app-product-card [productItem]="productItem"></app-product-card>
+            </ng-container>
+        </div>
+
+        <div class="product__buttons">
+            <div class="product__buttons-prev">
+                <app-dynamic-icon
+                    (click)="scrollFunction(-1)"
+                    iconShape="angle-left"
+                    iconBackgroundColor="var(--gray-color-lightest)"
+                    iconColor="var(--gray-color-dark)"
+                    iconSize="1.8rem"
+                    [iconHaveCircleBg]="true"
+                    iconMultiple="2"
+                    iconBackgroundHoverColor="var(--primary-color-normal)"
+                    iconHoverColor="var(--gray-color-lightest)"
+                    iconBorderColor="var(--gray-color-normal)"
+                    iconBorderHoverColor="var(--primary-color-normal)"
+                ></app-dynamic-icon>
+            </div>
+            <div class="product__buttons-next">
+                <app-dynamic-icon
+                    (click)="scrollFunction(1)"
+                    iconShape="angle-right"
+                    iconBackgroundColor="var(--gray-color-lightest)"
+                    iconColor="var(--gray-color-dark)"
+                    iconSize="1.8rem"
+                    [iconHaveCircleBg]="true"
+                    iconMultiple="2"
+                    iconBackgroundHoverColor="var(--primary-color-normal)"
+                    iconHoverColor="var(--gray-color-lightest)"
+                    iconBorderColor="var(--gray-color-normal)"
+                    iconBorderHoverColor="var(--primary-color-normal)"
+                ></app-dynamic-icon>
+            </div>
+        </div>
+    </div>
+</div>

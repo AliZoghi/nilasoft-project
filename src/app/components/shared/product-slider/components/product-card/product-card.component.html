@@ -1,0 +1,25 @@
+<div class="product">
+    <div class="product__image">
+        <img [src]="productItem.image" [alt]="productItem.title" />
+    </div>
+    <div class="product__description">
+        <h4>{{ productItem.title }}</h4>
+        <div class="product__info">
+            <div class="product__time">
+                <app-dynamic-icon iconShape="clock"> </app-dynamic-icon>
+                <span>{{ productItem.time | convertTime }}</span>
+            </div>
+            <app-level-svg [level]="productItem.level">
+                {{ productItem.level }}
+            </app-level-svg>
+        </div>
+        <app-rating [rateObj]="productItem.rate"></app-rating>
+    </div>
+    <div class="product__footer">
+        <div class="product__teacher">
+            <img [src]="productItem.teacher.image" [alt]="productItem.teacher.name" />
+            <span>{{ productItem.teacher.name }}</span>
+        </div>
+        <div class="bookmark"></div>
+    </div>
+</div>

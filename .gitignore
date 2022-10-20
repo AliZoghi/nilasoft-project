@@ -6,7 +6,7 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
-
+src/assets/fonts/fontawesome-pro-6.1.1-web/
 # dependencies
 /node_modules
 

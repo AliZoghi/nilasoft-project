@@ -1,5 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
+src/assets/fonts/fontawesome-pro-6.1.1-web/
 # compiled output
 /dist
 /tmp
