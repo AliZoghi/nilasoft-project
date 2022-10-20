@@ -6,7 +6,7 @@ import {Component, Input} from '@angular/core';
     styleUrls: ['./dynamic-icon.component.scss'],
 })
 export class DynamicIconComponent {
-    @Input() public iconColor!: string;
+    @Input() public iconColor?: string;
     @Input() public iconShape!: string;
     @Input() public iconBackgroundColor?: string = 'transparent';
     @Input() public iconSize?: string = '100%';

@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    .star-container {
+        display: flex;
+        gap: 0.25rem;
+        app-dynamic-icon {
+            color: var(--gray-color-normal);
+            font-size: 1.2rem;
+
+            &.active {
+                color: var(--secondary-color-normal);
+            }
+        }
+    }
+    .rate {
+        color: var(--secondary-color-normal);
+        font-size: 1.4rem;
+    }
+    .count {
+        font-size: var(--font-size-detail);
+    }
+}

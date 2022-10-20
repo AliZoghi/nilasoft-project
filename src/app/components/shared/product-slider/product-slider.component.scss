@@ -6,13 +6,12 @@
     h2 {
         color: var(--primary-color-darker);
         font-size: var(--font-size-heading);
-        padding-bottom: 2.4rem;
     }
     &__container {
         position: relative;
     }
     &__cards {
-        padding-block: 2rem;
+        padding-block: 2.4rem;
         overflow: hidden;
         display: flex;
         gap: var(--gap);

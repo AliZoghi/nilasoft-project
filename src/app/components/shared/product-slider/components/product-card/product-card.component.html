@@ -8,7 +8,7 @@
             <div class="product__time">{{ productItem.time }}</div>
             <div class="product__level">{{ productItem.level }}</div>
         </div>
-        <div class="product__rate">{{ productItem.rate.averageRate }}</div>
+        <app-rating [rateObj]="productItem.rate"></app-rating>
     </div>
     <div class="product__footer">
         <div class="product__teacher">
