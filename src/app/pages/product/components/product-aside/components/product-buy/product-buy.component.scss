@@ -1,6 +1,7 @@
 .buy {
     background-color: var(--gray-color-lightest);
     border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-soft);
     &__video {
         height: 21rem;
         object-fit: cover;
