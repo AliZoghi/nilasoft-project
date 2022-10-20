@@ -1,0 +1,13 @@
+.related {
+    padding-block: 8.8rem;
+    h2 {
+        font-size: var(--font-size-heading);
+        color: var(--primary-color-darker);
+        padding-block-end: 2.4rem;
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
