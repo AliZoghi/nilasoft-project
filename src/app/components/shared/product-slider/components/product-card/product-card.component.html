@@ -5,7 +5,10 @@
     <div class="product__description">
         <h4>{{ productItem.title }}</h4>
         <div class="product__info">
-            <div class="product__time">{{ productItem.time }}</div>
+            <div class="product__time">
+                <app-dynamic-icon iconShape="clock"> </app-dynamic-icon>
+                <span>{{ productItem.time | convertTime }}</span>
+            </div>
             <div class="product__level">{{ productItem.level }}</div>
         </div>
         <app-rating [rateObj]="productItem.rate"></app-rating>
