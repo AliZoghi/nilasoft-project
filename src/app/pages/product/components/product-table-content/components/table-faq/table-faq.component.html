@@ -1,1 +1,9 @@
-<p>table-faq works!</p>
+<div class="fqa">
+    <h3>Course - Frequently Asked Questions</h3>
+    <ul class="fqa__container">
+        <li *ngFor="let item of fqaObj">
+            <h4>{{ item.question }}</h4>
+            <p>{{ item.answer }}</p>
+        </li>
+    </ul>
+</div>

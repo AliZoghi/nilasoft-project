@@ -22,3 +22,26 @@ export const tableDescriptionFake: TableDescription = {
         'Break down the best ways to exude executive presence.',
     ],
 };
+
+export interface TableFQA {
+    question: string;
+    answer: string;
+}
+export const tableFQAFake: TableFQA[] = [
+    {
+        question: 'How this course help me to design layout?',
+        answer: 'My name is Jason Woo and I work as human duct tape at Gatsby, that means that I do a lot of different things. Everything from dev roll to writing content to writing code. And I used to work as an architect at IBM. I live in Portland, Oregon.',
+    },
+    {
+        question: 'What is important of this course?',
+        answer: "We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way to write React components in your markdown.",
+    },
+    {
+        question: 'Why Take This Course?',
+        answer: "We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way to write React components in your markdown.",
+    },
+    {
+        question: 'Is able to create application after this course?',
+        answer: "We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way to write React components in your markdown.",
+    },
+];
