@@ -14,7 +14,7 @@ export class DynamicIconComponent {
     @Input() public iconBackgroundHoverColor?: string;
     @Input() public iconBorderColor?: string = 'transparent';
     @Input() public iconBorderHoverColor?: string = 'transparent';
-    @Input() public iconSize?: string = '100%';
+    @Input() public iconSize?: string = '1.4rem';
     @Input() public iconMultiple?: string = '3';
     @Input() public iconHaveCircleBg?: boolean = false;
 }

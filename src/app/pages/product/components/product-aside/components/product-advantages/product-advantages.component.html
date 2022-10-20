@@ -1,0 +1,9 @@
+<div class="advantages">
+    <h4>What's included</h4>
+    <ul class="advantages__list">
+        <li *ngFor="let item of advantagesList">
+            <app-dynamic-icon [iconColor]="item.color" [iconShape]="item.icon"></app-dynamic-icon>
+            <span>{{ item.label }}</span>
+        </li>
+    </ul>
+</div>

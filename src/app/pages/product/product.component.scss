@@ -1,0 +1,11 @@
+main {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 2rem;
+    section {
+        margin-top: -5.6rem;
+    }
+    article {
+        grid-column: 1 / -1;
+    }
+}

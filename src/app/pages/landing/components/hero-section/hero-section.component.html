@@ -8,9 +8,17 @@
             </p>
 
             <div class="hero__buttons">
-                <ng-container *ngFor="let buttonOption of buttonOptions">
-                    <app-dynamic-button [options]="buttonOption"></app-dynamic-button>
-                </ng-container>
+                <app-dynamic-button
+                    buttonColor="var(--gray-color-lightest)"
+                    buttonBackgroundColor="var(--tertiary-color-normal)"
+                    buttonBackgroundHoverColor="var(--tertiary-color-dark)"
+                    label="Browse Courses?"
+                ></app-dynamic-button>
+                <app-dynamic-button
+                    buttonColor="var(--gray-color-darkest)"
+                    buttonBackgroundColor="var(--gray-color-lightest)"
+                    label="Are You Instructor?"
+                ></app-dynamic-button>
             </div>
         </div>
 

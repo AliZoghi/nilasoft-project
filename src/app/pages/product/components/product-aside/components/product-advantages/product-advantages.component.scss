@@ -1,0 +1,24 @@
+.advantages {
+    background-color: var(--gray-color-lightest);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-soft);
+
+    h4 {
+        color: var(--primary-color-darker);
+        font-size: var(--font-size-quaternary);
+        font-weight: 600;
+        padding: 1.6rem 2.4rem;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            border-top: 2px solid var(--gray-color-normal);
+            padding: 1.2rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+    }
+}

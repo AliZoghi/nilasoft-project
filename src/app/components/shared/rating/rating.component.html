@@ -1,4 +1,4 @@
-<div class="wrapper" [title]="rateObj.averageRate">
+<div class="wrapper" [title]="rateObj.averageRate" [style.--countSize]="countSize">
     <div class="star-container" *ngIf="starShown">
         <ng-container *ngFor="let count of createStars(5, rateObj.averageRate)">
             <app-dynamic-icon iconType="solid" iconShape="star" [class.active]="count === 1"></app-dynamic-icon>

@@ -1,0 +1,49 @@
+<div class="teacher">
+    <div class="teacher__header">
+        <div class="teacher__image">
+            <img [src]="teacherInfo.image" [alt]="teacherInfo.name" />
+            <img class="verify" src="https://codescandy.com/geeks-bootstrap-5/assets/images/svg/checked-mark.svg" />
+        </div>
+        <div class="teacher__info">
+            <h4>{{ teacherInfo.name }}</h4>
+            <p>{{ teacherInfo.field.join(', ') }}</p>
+            <div class="teacher__rating">
+                <span class="rate-number">{{ teacherInfo.rating }}</span>
+                <app-dynamic-icon
+                    class="icon"
+                    iconSize="1.2rem"
+                    iconShape="star"
+                    iconType="solid"
+                    iconColor="var(--secondary-color-normal)"
+                ></app-dynamic-icon>
+                <span>Instructor Rating</span>
+            </div>
+        </div>
+    </div>
+    <div class="teacher__achievement">
+        <div class="teacher__achievement__item">
+            <h5>{{ teacherInfo.studentNumber | number: '1.0':'en-US' }}</h5>
+            <span>Students</span>
+        </div>
+        <div class="teacher__achievement__item">
+            <h5>{{ teacherInfo.coursesNumber | number: '1.0':'en-US' }}</h5>
+            <span>Courses</span>
+        </div>
+        <div class="teacher__achievement__item">
+            <h5>{{ teacherInfo.reviewsNumber | number: '1.0':'en-US' }}</h5>
+            <span>Reviews</span>
+        </div>
+    </div>
+    <div class="teacher__about">
+        <p>{{ teacherInfo.summary }}</p>
+        <app-dynamic-button
+            label="View Details"
+            buttonColor="var(--gray-color-darker)"
+            buttonBackgroundColor="var(--gray-color-lightest)"
+            buttonBackgroundHoverColor="var(--gray-color-normal)"
+            buttonBorderColor="var(--gray-color-dark)"
+            buttonBorderHoverColor="var(--gray-color-darker)"
+            [buttonMultiple]="0.5"
+        ></app-dynamic-button>
+    </div>
+</div>

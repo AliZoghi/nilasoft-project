@@ -1,0 +1,8 @@
+<div class="related">
+    <h2>Related Courses</h2>
+    <div class="related__container">
+        <ng-container *ngFor="let product of productRelated | slice: 0:4">
+            <app-product-card [productItem]="product"></app-product-card>
+        </ng-container>
+    </div>
+</div>

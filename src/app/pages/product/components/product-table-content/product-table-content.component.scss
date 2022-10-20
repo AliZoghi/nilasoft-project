@@ -1,0 +1,37 @@
+.table-content {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-soft);
+    background-color: var(--gray-color-lightest);
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        height: 5.6rem;
+        border-bottom: 3px solid var(--gray-color-normal);
+        li {
+            padding-inline: 2.4rem;
+            a {
+                font-weight: 500;
+                text-transform: capitalize;
+                padding-block: 1.8rem;
+                color: var(--gray-color-darker);
+                transition: 300ms ease;
+                transition-property: color, border-color;
+                border-bottom: 2px solid transparent;
+                &:hover {
+                    color: var(--primary-color-normal);
+                    border-color: var(--primary-color-normal);
+                }
+                &.active {
+                    color: var(--primary-color-normal);
+                    border-color: var(--primary-color-normal);
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding: 2.4rem;
+        line-height: 1.6;
+    }
+}

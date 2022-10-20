@@ -1,0 +1,57 @@
+.buy {
+    background-color: var(--gray-color-lightest);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-soft);
+    &__video {
+        height: 21rem;
+        object-fit: cover;
+        padding: 0.5rem;
+        position: relative;
+        margin-block-end: 1.6rem;
+        &-image {
+            border-radius: var(--border-radius);
+            display: inline-block;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url("https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-javascript.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        app-dynamic-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    }
+
+    &__description {
+        padding: 2.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &__price {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+        font-weight: 600;
+        span {
+            color: var(--primary-color-darker);
+            font-size: var(--font-size-heading);
+        }
+        del {
+            font-size: var(--font-size-quaternary);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
