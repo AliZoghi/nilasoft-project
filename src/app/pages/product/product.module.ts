@@ -11,7 +11,7 @@ import {ProductAsideComponent} from './components/product-aside/product-aside.co
 import {ProductBuyComponent} from './components/product-aside/components/product-buy/product-buy.component';
 import {ProductAdvantagesComponent} from './components/product-aside/components/product-advantages/product-advantages.component';
 import {ProductTeacherComponent} from './components/product-aside/components/product-teacher/product-teacher.component';
-import { ProductRelatedComponent } from './components/product-related/product-related.component';
+import {ProductRelatedComponent} from './components/product-related/product-related.component';
 
 @NgModule({
     declarations: [
