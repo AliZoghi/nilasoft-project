@@ -1,0 +1,33 @@
+.product {
+    padding-block: 5.6rem 12rem;
+    background-color: var(--primary-color-normal);
+    color: var(--gray-color-lightest);
+    &__container {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+    }
+    h1 {
+        padding-block-end: 0.8rem;
+        font-size: var(--font-size-biggest-heading);
+        font-weight: 600;
+    }
+    p {
+        font-size: var(--font-size-sub-heading);
+        padding-block-end: 4rem;
+        letter-spacing: -0.03rem;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+    &__labels {
+        display: flex;
+        gap: 3rem;
+
+        .members {
+            display: flex;
+            gap: 0.25rem;
+        }
+        app-rating {
+            font-size: 1.8rem;
+        }
+    }
+}

@@ -18,6 +18,6 @@ import {LevelSvgComponent} from './level-svg/level-svg.component';
         LevelSvgComponent,
     ],
     imports: [CommonModule, ConvertTimeModule],
-    exports: [DynamicButtonComponent, DynamicIconComponent, ProductSliderComponent],
+    exports: [DynamicButtonComponent, DynamicIconComponent, ProductSliderComponent, LevelSvgComponent, RatingComponent],
 })
 export class SharedModule {}

@@ -11,13 +11,12 @@ export class RatingComponent {
     @Input() public rateShown: boolean = true;
     @Input() public starShown: boolean = true;
     @Input() public countShown: boolean = true;
+    @Input() public countSize?: string = 'var(--font-size-detail)';
 
     public createStars(count: number, ratePoint: number): number[] {
         return new Array(count).fill(0).map((n, index) => {
-            if (ratePoint >= index + 1) {
-                return 1;
-            }
-            return n;
+            if (ratePoint >= index + 1) return 1;
+            return 0;
         });
     }
 }
