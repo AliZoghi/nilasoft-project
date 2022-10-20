@@ -6,7 +6,7 @@ import {ProductSliderComponent} from './product-slider/product-slider.component'
 import {ProductCardComponent} from './product-slider/components/product-card/product-card.component';
 import {RatingComponent} from './rating/rating.component';
 import {ConvertTimeModule} from '../../pipes/convert-time/convert-time.module';
-import { LevelSvgComponent } from './level-svg/level-svg.component';
+import {LevelSvgComponent} from './level-svg/level-svg.component';
 
 @NgModule({
     declarations: [
