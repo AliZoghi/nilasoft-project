@@ -1,8 +1,13 @@
 <div
     class="information__icon"
     [style.--color]="iconColor"
+    [style.--colorHover]="iconHoverColor || iconColor"
     [style.--backgroundColor]="iconBackgroundColor"
+    [style.--backgroundHoverColor]="iconBackgroundHoverColor || iconBackgroundColor"
+    [style.--borderColor]="iconBorderColor"
+    [style.--borderHoverColor]="iconBorderHoverColor"
     [style.--size]="iconSize"
+    [style.--multiple]="iconMultiple"
     [class.circleBg]="iconHaveCircleBg"
 >
     <i [class]="'fa-' + iconType + ' fa-' + iconShape"></i>

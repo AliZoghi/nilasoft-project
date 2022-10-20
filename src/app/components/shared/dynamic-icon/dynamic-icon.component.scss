@@ -1,15 +1,26 @@
 .information__icon {
     color: var(--color);
+    transition: 300ms ease;
+    transition-property: color, border-color, background-color;
+    &:hover {
+        color: var(--colorHover);
+    }
     i {
         font-size: var(--size);
     }
 
     &.circleBg {
         border-radius: 100rem;
-        background-color: var(--backgroundColor);
         position: relative;
-        width: calc(var(--size) * 3);
-        height: calc(var(--size) * 3);
+        background-color: var(--backgroundColor);
+        border: 0.5px solid var(--borderColor);
+        width: calc(var(--size) * var(--multiple));
+        height: calc(var(--size) * var(--multiple));
+        &:hover {
+            border-color: var(--borderHoverColor);
+            background-color: var(--backgroundHoverColor);
+        }
+
         i {
             position: absolute;
             left: 50%;

@@ -22,17 +22,18 @@
         padding: 2.4rem;
         h4 {
             color: var(--primary-color-darker);
-            padding-bottom: 0.8rem;
+            line-height: 1.4;
             transition: color 300ms ease;
+            padding-block-end: 0.8rem;
             &:hover {
                 color: var(--primary-color-dark);
             }
         }
     }
     &__info {
-        padding-bottom: 1.6rem;
+        padding-block-end: 1.6rem;
         display: flex;
-        gap: 0.5rem;
+        gap: 2rem;
     }
     &__time {
         display: flex;
@@ -43,10 +44,6 @@
         span {
             color: var(--gray-color-darker);
         }
-    }
-    &__level {
-    }
-    &__rate {
     }
     &__footer {
         border-top: 2px solid var(--gray-color-normal);
