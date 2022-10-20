@@ -1,0 +1,38 @@
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    line-height: 1.6;
+    h3,
+    h4 {
+        color: var(--primary-color-darker);
+        font-weight: 600;
+    }
+    &__description {
+        h3 {
+            padding-block-end: 0.8rem;
+            font-size: var(--font-size-sub-heading);
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+    }
+    &__learn-list {
+        h4 {
+            padding-block-end: 1.6rem;
+            font-size: var(--font-size-tertiary-heading);
+        }
+        .learn-list__container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+    }
+}
