@@ -1,5 +1,4 @@
 import {Component, Input} from '@angular/core';
-import {DynamicButtonOptions} from '../../../models/DynamicButtonOptions.interface';
 
 @Component({
     selector: 'app-dynamic-button',
@@ -7,5 +6,11 @@ import {DynamicButtonOptions} from '../../../models/DynamicButtonOptions.interfa
     styleUrls: ['./dynamic-button.component.scss'],
 })
 export class DynamicButtonComponent {
-    @Input() public options!: DynamicButtonOptions;
+    @Input() public label!: string;
+    @Input() public buttonColor!: string;
+    @Input() public buttonBackgroundColor!: string;
+    @Input() public buttonColorHover?: string;
+    @Input() public buttonBackgroundHoverColor?: string;
+    @Input() public buttonBorderColor?: string = 'transparent';
+    @Input() public buttonBorderHoverColor?: string;
 }

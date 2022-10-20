@@ -1,0 +1,36 @@
+<div class="buy">
+    <div class="buy__video">
+        <div class="buy__video-image"></div>
+        <app-dynamic-icon
+            iconShape="play"
+            iconColor="var(--primary-color-normal)"
+            iconHoverColor="var(--gray-color-lightest)"
+            [iconHaveCircleBg]="true"
+            iconBackgroundColor="var(--gray-color-lightest)"
+            iconBackgroundHoverColor="var(--primary-color-normal)"
+            iconMultiple="4"
+        ></app-dynamic-icon>
+    </div>
+    <div class="buy__description">
+        <div class="buy__price">
+            <span>${{ 600 }}</span>
+            <del>${{ 750 }}</del>
+        </div>
+        <div class="buy__buttons">
+            <app-dynamic-button
+                label="Start Free Month"
+                buttonColor="var(--gray-color-lightest)"
+                buttonBackgroundColor="var(--primary-color-normal)"
+                buttonBackgroundHoverColor="var(--primary-color-dark)"
+            ></app-dynamic-button>
+            <app-dynamic-button
+                label="Get Full Access"
+                buttonColor="var(--primary-color-normal)"
+                buttonBackgroundColor="var(--gray-color-lightest)"
+                buttonColorHover="var(--gray-color-lightest)"
+                buttonBackgroundHoverColor="var(--primary-color-normal)"
+                buttonBorderColor="var(--primary-color-normal)"
+            ></app-dynamic-button>
+        </div>
+    </div>
+</div>

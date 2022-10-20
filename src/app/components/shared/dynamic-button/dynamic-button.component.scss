@@ -3,9 +3,10 @@
     background-color: $bgColor;
     border: 1px solid $borderColor;
 }
-@mixin create-button-hover-style($colorHover, $backgroundHoverColor) {
+@mixin create-button-hover-style($colorHover, $backgroundHoverColor, $borderHoverColor) {
     color: $colorHover;
     background-color: $backgroundHoverColor;
+    border-color: $borderHoverColor;
 }
 
 .button {
@@ -22,9 +23,9 @@
 
     &:active {
         box-shadow: var(--button-box-shadow);
-        @include create-button-hover-style(var(--colorHover), var(--backgroundHoverColor));
     }
-    &:hover {
-        @include create-button-hover-style(var(--colorHover), var(--backgroundHoverColor));
+    &:hover,
+    &:active {
+        @include create-button-hover-style(var(--colorHover), var(--backgroundHoverColor), var(--borderHoverColor));
     }
 }

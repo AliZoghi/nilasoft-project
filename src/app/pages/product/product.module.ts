@@ -7,9 +7,11 @@ import {ProductTableContentComponent} from './components/product-table-content/p
 import {RouterModule} from '@angular/router';
 import { TableDescriptionComponent } from './components/product-table-content/components/table-description/table-description.component';
 import { TableFaqComponent } from './components/product-table-content/components/table-faq/table-faq.component';
+import { ProductAsideComponent } from './components/product-aside/product-aside.component';
+import { ProductBuyComponent } from './components/product-aside/components/product-buy/product-buy.component';
 
 @NgModule({
-    declarations: [ProductComponent, ProductDescriptionComponent, ProductTableContentComponent, TableDescriptionComponent, TableFaqComponent],
+    declarations: [ProductComponent, ProductDescriptionComponent, ProductTableContentComponent, TableDescriptionComponent, TableFaqComponent, ProductAsideComponent, ProductBuyComponent],
     imports: [CommonModule, SharedModule, RouterModule],
 })
 export class ProductModule {}

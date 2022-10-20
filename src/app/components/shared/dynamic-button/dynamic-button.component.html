@@ -1,9 +1,10 @@
 <a
     class="button no-select"
-    [style.--color]="options.color"
-    [style.--backgroundColor]="options.backgroundColor"
-    [style.--colorHover]="options.colorHover || options.color"
-    [style.--backgroundHoverColor]="options.backgroundHoverColor || options.backgroundColor"
-    [style.--borderColor]="options.borderColor || options.backgroundHoverColor || options.backgroundColor"
-    >{{ options.label }}</a
+    [style.--color]="buttonColor"
+    [style.--backgroundColor]="buttonBackgroundColor"
+    [style.--colorHover]="buttonColorHover || buttonColor"
+    [style.--backgroundHoverColor]="buttonBackgroundHoverColor || buttonBackgroundColor"
+    [style.--borderColor]="buttonBorderColor || buttonBackgroundColor"
+    [style.--borderHoverColor]="buttonBorderHoverColor || buttonBorderColor"
+    >{{ label }}</a
 >
