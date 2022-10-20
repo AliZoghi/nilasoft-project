@@ -9,7 +9,9 @@
                 <app-dynamic-icon iconShape="clock"> </app-dynamic-icon>
                 <span>{{ productItem.time | convertTime }}</span>
             </div>
-            <div class="product__level">{{ productItem.level }}</div>
+            <app-level-svg [level]="productItem.level">
+                {{ productItem.level }}
+            </app-level-svg>
         </div>
         <app-rating [rateObj]="productItem.rate"></app-rating>
     </div>
