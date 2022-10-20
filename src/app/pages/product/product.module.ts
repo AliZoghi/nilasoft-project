@@ -10,6 +10,7 @@ import {TableFaqComponent} from './components/product-table-content/components/t
 import {ProductAsideComponent} from './components/product-aside/product-aside.component';
 import {ProductBuyComponent} from './components/product-aside/components/product-buy/product-buy.component';
 import {ProductAdvantagesComponent} from './components/product-aside/components/product-advantages/product-advantages.component';
+import {ProductTeacherComponent} from './components/product-aside/components/product-teacher/product-teacher.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import {ProductAdvantagesComponent} from './components/product-aside/components/
         ProductAsideComponent,
         ProductBuyComponent,
         ProductAdvantagesComponent,
+        ProductTeacherComponent,
     ],
     imports: [CommonModule, SharedModule, RouterModule],
 })

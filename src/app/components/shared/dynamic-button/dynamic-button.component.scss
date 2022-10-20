@@ -12,15 +12,17 @@
 .button {
     @include create-button-style(var(--color), var(--backgroundColor), var(--borderColor));
     display: inline-block;
-    padding: 1.6rem 2rem;
+    padding: calc(1.6rem * var(--multiple)) calc(2rem * var(--multiple));
     font-weight: 600;
     border-radius: var(--border-radius);
-    width: 100%;
+    width: auto;
     text-transform: capitalize;
-
     transition: 300ms ease;
-    transition-property: box-shadow, color, background-color;
+    transition-property: box-shadow, color, background-color, border-color;
 
+    &.full-width {
+        width: 100%;
+    }
     &:active {
         box-shadow: var(--button-box-shadow);
     }
