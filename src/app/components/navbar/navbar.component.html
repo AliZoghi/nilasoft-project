@@ -1,1 +1,13 @@
-<p style="height: 7rem; background-color: gray">navbar works!</p>
+<div class="navbar__container">
+    <ul>
+        <ng-template #recursiveList let-list>
+            <li *ngFor="let item of list">
+                {{ item.displayName }}
+                <ul *ngIf="item.children.length > 0">
+                    <ng-container *ngTemplateOutlet="recursiveList; context: {$implicit: item.children}"></ng-container>
+                </ul>
+            </li>
+        </ng-template>
+        <ng-container *ngTemplateOutlet="recursiveList; context: {$implicit: list}"></ng-container>
+    </ul>
+</div>
