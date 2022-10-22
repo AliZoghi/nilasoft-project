@@ -65,6 +65,7 @@ body {
     color: var(--gray-color-darker);
     font-size: var(--font-size-paragraph);
     font-weight: 400;
+    overflow-x: hidden;
 
     app-root {
         display: flex;

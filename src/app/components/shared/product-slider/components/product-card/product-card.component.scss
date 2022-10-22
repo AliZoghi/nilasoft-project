@@ -9,9 +9,10 @@
     &:hover {
         box-shadow: var(--box-shadow-hard);
     }
-    //background-color: red;
     &__image {
         img {
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
             height: 14rem;
             object-fit: cover;
             width: 100%;
@@ -32,7 +33,8 @@
     &__info {
         padding-block-end: 1.6rem;
         display: flex;
-        gap: 2rem;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
     &__time {
         display: flex;
@@ -48,6 +50,7 @@
         border-top: 2px solid var(--gray-color-normal);
         padding: 1.6rem 2.4rem;
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
     &__teacher {
@@ -58,6 +61,25 @@
             width: 2.4rem;
             height: 2.4rem;
             border-radius: 100rem;
+        }
+    }
+}
+
+@media (width <= 992px) {
+    .product {
+        &__image {
+            img {
+                height: 20rem;
+            }
+        }
+    }
+}
+@media (width <= 768px) {
+    .product {
+        &__image {
+            img {
+                height: auto;
+            }
         }
     }
 }
