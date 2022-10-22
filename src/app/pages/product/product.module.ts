@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {ProductComponent} from './product.component';
 import {ProductDescriptionComponent} from './components/product-description/product-description.component';
 import {SharedModule} from '../../components/shared/shared.module';
@@ -26,6 +25,30 @@ import {ProductRelatedComponent} from './components/product-related/product-rela
         ProductTeacherComponent,
         ProductRelatedComponent,
     ],
-    imports: [CommonModule, SharedModule, RouterModule],
+    imports: [
+        SharedModule,
+        RouterModule.forChild([
+            {path: '', pathMatch: 'full', redirectTo: '/landing'},
+            {
+                path: ':id',
+                component: ProductComponent,
+                children: [
+                    {
+                        path: '',
+                        pathMatch: 'full',
+                        redirectTo: 'description',
+                    },
+                    {
+                        path: 'description',
+                        component: TableDescriptionComponent,
+                    },
+                    {
+                        path: 'faq',
+                        component: TableFaqComponent,
+                    },
+                ],
+            },
+        ]),
+    ],
 })
 export class ProductModule {}

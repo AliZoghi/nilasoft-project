@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnDestroy, ViewChild} from '@angular/core';
-import {ProductItem, ProductItemFake} from '../../../models/ProductItem.interface';
+import {ProductItem, ProductItemFake} from '../../../../models/ProductItem.interface';
 
 @Component({
     selector: 'app-product-slider',

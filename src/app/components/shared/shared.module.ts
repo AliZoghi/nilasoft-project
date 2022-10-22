@@ -2,8 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DynamicButtonComponent} from './dynamic-button/dynamic-button.component';
 import {DynamicIconComponent} from './dynamic-icon/dynamic-icon.component';
-import {ProductSliderComponent} from './product-slider/product-slider.component';
-import {ProductCardComponent} from './product-slider/components/product-card/product-card.component';
+import {ProductCardComponent} from './product-card/product-card.component';
 import {RatingComponent} from './rating/rating.component';
 import {ConvertTimeModule} from '../../pipes/convert-time/convert-time.module';
 import {LevelSvgComponent} from './level-svg/level-svg.component';
@@ -13,7 +12,6 @@ import {TooltipComponent} from './tooltip/tooltip.component';
     declarations: [
         DynamicButtonComponent,
         DynamicIconComponent,
-        ProductSliderComponent,
         ProductCardComponent,
         RatingComponent,
         LevelSvgComponent,
@@ -23,11 +21,12 @@ import {TooltipComponent} from './tooltip/tooltip.component';
     exports: [
         DynamicButtonComponent,
         DynamicIconComponent,
-        ProductSliderComponent,
         LevelSvgComponent,
         RatingComponent,
         ProductCardComponent,
         TooltipComponent,
+        CommonModule,
+        ConvertTimeModule,
     ],
 })
 export class SharedModule {}
