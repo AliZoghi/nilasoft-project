@@ -20,6 +20,8 @@
             <img [src]="productItem.teacher.image" [alt]="productItem.teacher.name" />
             <span>{{ productItem.teacher.name }}</span>
         </div>
-        <div class="bookmark"></div>
+        <app-tooltip tooltipText="Add to Bookmarks">
+            <app-dynamic-icon iconShape="bookmark"></app-dynamic-icon>
+        </app-tooltip>
     </div>
 </div>

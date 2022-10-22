@@ -7,6 +7,7 @@ import {ProductCardComponent} from './product-slider/components/product-card/pro
 import {RatingComponent} from './rating/rating.component';
 import {ConvertTimeModule} from '../../pipes/convert-time/convert-time.module';
 import {LevelSvgComponent} from './level-svg/level-svg.component';
+import {TooltipComponent} from './tooltip/tooltip.component';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import {LevelSvgComponent} from './level-svg/level-svg.component';
         ProductCardComponent,
         RatingComponent,
         LevelSvgComponent,
+        TooltipComponent,
     ],
     imports: [CommonModule, ConvertTimeModule],
     exports: [
@@ -25,6 +27,7 @@ import {LevelSvgComponent} from './level-svg/level-svg.component';
         LevelSvgComponent,
         RatingComponent,
         ProductCardComponent,
+        TooltipComponent,
     ],
 })
 export class SharedModule {}

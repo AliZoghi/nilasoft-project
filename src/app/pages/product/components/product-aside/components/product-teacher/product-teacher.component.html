@@ -1,8 +1,10 @@
 <div class="teacher">
     <div class="teacher__header">
         <div class="teacher__image">
-            <img [src]="teacherInfo.image" [alt]="teacherInfo.name" />
-            <img class="verify" src="https://codescandy.com/geeks-bootstrap-5/assets/images/svg/checked-mark.svg" />
+            <img class="picture" [src]="teacherInfo.image" [alt]="teacherInfo.name" />
+            <app-tooltip tooltipText="Verify" class="verify">
+                <img src="https://codescandy.com/geeks-bootstrap-5/assets/images/svg/checked-mark.svg" />
+            </app-tooltip>
         </div>
         <div class="teacher__info">
             <h4>{{ teacherInfo.name }}</h4>

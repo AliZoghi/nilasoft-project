@@ -7,7 +7,12 @@
                 will get you started coding in JavaScript.
             </p>
             <div class="product__labels">
-                <div class="bookmark"></div>
+                <app-tooltip tooltipText="Add to Bookmarks">
+                    <div class="bookmark">
+                        <app-dynamic-icon iconShape="bookmark"></app-dynamic-icon>
+                        <span>Bookmark</span>
+                    </div>
+                </app-tooltip>
                 <div class="members">
                     <app-dynamic-icon iconShape="user" iconColor="var(--gray-color-dark)"></app-dynamic-icon>
                     <span>1200</span>
