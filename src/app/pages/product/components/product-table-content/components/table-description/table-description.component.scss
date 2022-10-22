@@ -36,3 +36,13 @@
         }
     }
 }
+
+@media (width <= 768px) {
+    .description {
+        &__learn-list {
+            .learn-list__container {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

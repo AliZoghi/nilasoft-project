@@ -65,6 +65,7 @@ body {
     color: var(--gray-color-darker);
     font-size: var(--font-size-paragraph);
     font-weight: 400;
+    //overflow-x: hidden;
 
     app-root {
         display: flex;
@@ -107,6 +108,7 @@ app-root {
 .container {
     max-inline-size: var(--content-max-width);
     width: 100%;
+    padding-inline: 1.2rem;
     margin-inline: auto;
 }
 

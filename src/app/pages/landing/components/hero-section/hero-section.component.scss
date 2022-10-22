@@ -33,3 +33,14 @@
         }
     }
 }
+
+@media (width <= 992px) {
+    .hero {
+        &__container {
+            flex-direction: column;
+        }
+        &__description {
+            padding-block: 3.2rem;
+        }
+    }
+}
