@@ -13,7 +13,7 @@ import {NavbarModule} from './components/navbar/navbar.module';
 
 @NgModule({
     declarations: [AppComponent, FooterComponent],
-    imports: [BrowserModule, AppRoutingModule, SharedModule, NavbarModule, LandingModule, ProductModule],
+    imports: [BrowserModule, AppRoutingModule, SharedModule, NavbarModule],
     providers: [],
     bootstrap: [AppComponent],
 })
