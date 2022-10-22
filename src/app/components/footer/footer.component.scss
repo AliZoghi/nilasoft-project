@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.6rem;
+    text-transform: capitalize;
+    border-top: 1px solid var(--gray-color-dark);
+    &__copyright {
+    }
+    &__links {
+        margin-inline-start: auto;
+        display: flex;
+
+        li {
+            a {
+                color: var(--gray-color-darker);
+
+                font-size: var(--font-size-paragraph);
+            }
+            padding-inline: 1.6rem;
+            &:hover {
+                a {
+                    color: var(--primary-color-normal);
+                }
+            }
+        }
+    }
+}
