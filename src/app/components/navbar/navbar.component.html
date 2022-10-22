@@ -1,15 +1,7 @@
 <div class="navbar">
     <ul>
         <ng-template #recursiveList let-list>
-            <li
-                *ngFor="let item of list"
-                [ngClass]="{
-                    'no-class': item.options?.className?.noClass,
-                    'color-gray': item.options?.className?.colorGray,
-                    'padding-inline': item.options?.className?.padding,
-                    heading: item.options?.className?.heading
-                }"
-            >
+            <li *ngFor="let item of list" [ngClass]="item.options?.className?.join(' ')">
                 <ng-container
                     [ngTemplateOutlet]="item.options?.component ? components : inside"
                     [ngTemplateOutletContext]="{$implicit: item}"
@@ -38,8 +30,8 @@
             ></app-dynamic-button>
         </ng-container>
 
-        <ng-container *ngSwitchCase="'border'">
-            <div class="navbar__border">
+        <ng-container *ngSwitchCase="'underline'">
+            <div class="underline">
                 <span></span>
             </div>
         </ng-container>

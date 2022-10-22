@@ -149,11 +149,7 @@ export const NavItemFake: NavItem[] = [
             {
                 displayName: 'Landings',
                 options: {
-                    className: {
-                        heading: true,
-                        colorGray: true,
-                        noClass: true,
-                    },
+                    className: ['no-class', 'heading', 'color-gray'],
                 },
                 children: [],
             },
@@ -382,11 +378,8 @@ export const NavItemFake: NavItem[] = [
             {
                 displayName: '',
                 options: {
-                    component: 'border',
-                    className: {
-                        border: true,
-                        noClass: true,
-                    },
+                    component: 'underline',
+                    className: ['no-class', 'underline'],
                 },
                 children: [],
             },
@@ -450,11 +443,7 @@ export const NavItemFake: NavItem[] = [
             {
                 displayName: 'Accounts',
                 options: {
-                    className: {
-                        heading: true,
-                        colorGray: true,
-                        noClass: true,
-                    },
+                    className: ['no-class', 'heading', 'color-gray'],
                 },
                 children: [],
             },
@@ -465,31 +454,22 @@ export const NavItemFake: NavItem[] = [
                     {
                         displayName: 'Instructor',
                         options: {
-                            className: {
-                                heading: true,
-                                noClass: true,
-                            },
+                            className: ['no-class', 'heading'],
                         },
                         children: [],
                     },
                     {
                         displayName: 'Instructor dashboard for manage courses and earning.',
                         options: {
-                            className: {
-                                noClass: true,
-                                colorGray: true,
-                            },
+                            className: ['no-class', 'color-gray'],
                         },
                         children: [],
                     },
                     {
                         displayName: '',
                         options: {
-                            component: 'border',
-                            className: {
-                                border: true,
-                                noClass: true,
-                            },
+                            component: 'underline',
+                            className: ['no-class', 'underline'],
                         },
                         children: [],
                     },
@@ -569,31 +549,22 @@ export const NavItemFake: NavItem[] = [
                     {
                         displayName: 'Students',
                         options: {
-                            className: {
-                                heading: true,
-                                noClass: true,
-                            },
+                            className: ['no-class', 'heading'],
                         },
                         children: [],
                     },
                     {
                         displayName: 'Students dashboard to manage your courses and subscriptions.',
                         options: {
-                            className: {
-                                noClass: true,
-                                colorGray: true,
-                            },
+                            className: ['no-class', 'color-gray'],
                         },
                         children: [],
                     },
                     {
                         displayName: '',
                         options: {
-                            component: 'border',
-                            className: {
-                                border: true,
-                                noClass: true,
-                            },
+                            component: 'underline',
+                            className: ['no-class', 'underline'],
                         },
                         children: [],
                     },
@@ -677,10 +648,7 @@ export const NavItemFake: NavItem[] = [
                     {
                         displayName: 'Master Admin',
                         options: {
-                            className: {
-                                heading: true,
-                                noClass: true,
-                            },
+                            className: ['no-class', 'heading'],
                         },
                         children: [],
                     },
@@ -688,21 +656,15 @@ export const NavItemFake: NavItem[] = [
                         displayName:
                             'Master admin dashboard to manage courses, user, site setting , and work with amazing apps.',
                         options: {
-                            className: {
-                                noClass: true,
-                                colorGray: true,
-                            },
+                            className: ['no-class', 'color-gray'],
                         },
                         children: [],
                     },
                     {
                         displayName: '',
                         options: {
-                            component: 'border',
-                            className: {
-                                border: true,
-                                noClass: true,
-                            },
+                            component: 'underline',
+                            className: ['no-class', 'underline'],
                         },
                         children: [],
                     },
@@ -710,9 +672,7 @@ export const NavItemFake: NavItem[] = [
                         displayName: 'Go to Dashboard',
                         options: {
                             component: 'button',
-                            className: {
-                                padding: true,
-                            },
+                            className: ['padding-inline'],
                         },
                         children: [],
                     },
@@ -721,11 +681,8 @@ export const NavItemFake: NavItem[] = [
             {
                 displayName: '',
                 options: {
-                    component: 'border',
-                    className: {
-                        border: true,
-                        noClass: true,
-                    },
+                    component: 'underline',
+                    className: ['no-class', 'underline'],
                 },
                 children: [],
             },
