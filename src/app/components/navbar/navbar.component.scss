@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    background-color: var(--gray-color-lightest);
     &__logo {
     }
 
@@ -11,6 +12,9 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+        app-navbar-search {
+            flex-basis: 28rem;
+        }
         &--right {
             margin-inline-start: auto;
             display: flex;

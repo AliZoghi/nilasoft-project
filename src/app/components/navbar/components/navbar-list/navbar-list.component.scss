@@ -84,7 +84,10 @@
             color: var(--primary-color-darker);
             position: relative;
 
-            //padding: 1.2rem;
+            &:hover {
+                background-color: transparent;
+            }
+
             & > .display-name {
                 padding: 1.2rem;
             }

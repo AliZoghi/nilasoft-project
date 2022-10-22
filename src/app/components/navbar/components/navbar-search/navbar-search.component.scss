@@ -1,0 +1,26 @@
+.search-box {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--gray-color-dark);
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    position: relative;
+
+    &__icon {
+        padding-inline-start: 1.2rem;
+        position: absolute;
+    }
+
+    &__input {
+        border-radius: var(--border-radius);
+        flex: 1;
+        padding: 1.2rem 1.6rem;
+        padding-inline-start: 4rem;
+        color: var(--primary-color-darker);
+        background-color: transparent;
+        &:focus {
+            box-shadow: var(--button-box-shadow);
+            border-color: var(--gray-color-darker);
+        }
+    }
+}

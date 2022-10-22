@@ -672,7 +672,7 @@ export const NavItemFake: NavItem[] = [
                         displayName: 'Go to Dashboard',
                         options: {
                             component: 'button',
-                            className: ['padding-inline'],
+                            className: ['padding-inline', 'no-class'],
                         },
                         children: [],
                     },
