@@ -18,6 +18,9 @@
         & > * {
             flex-shrink: 0;
             flex-basis: calc((100% / var(--count-row)) - (((var(--count-row) - 1) * var(--gap)) / var(--count-row)));
+            &:last-child {
+                overflow: hidden;
+            }
         }
     }
     &__buttons {
