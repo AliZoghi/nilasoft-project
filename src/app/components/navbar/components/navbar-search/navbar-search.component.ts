@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -10,6 +10,7 @@ export class NavbarSearchComponent {
     public searchPhrase: string = '';
     public constructor(private router: Router) {}
     public async searchByPhrase(phrase: string): Promise<void> {
-        await this.router.navigate(['/search'], {queryParams: {searchPhrase: phrase}});
+        await this.router.navigate(['product', phrase]);
+        this.searchPhrase = '';
     }
 }

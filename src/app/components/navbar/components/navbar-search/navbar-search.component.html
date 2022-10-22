@@ -5,7 +5,8 @@
         class="search-box__input"
         type="search"
         placeholder="Search Courses"
+        [(ngModel)]="searchPhrase"
         [value]="searchPhrase"
-        (click)="searchByPhrase(searchPhrase)"
+        (keydown.enter)="searchByPhrase(searchPhrase)"
     />
 </div>
