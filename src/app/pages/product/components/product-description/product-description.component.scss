@@ -33,3 +33,13 @@
         }
     }
 }
+
+@media (width <= 768px) {
+    .product {
+        &__labels {
+            app-level-svg {
+                display: none;
+            }
+        }
+    }
+}

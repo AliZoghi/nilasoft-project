@@ -3,9 +3,27 @@ main {
     grid-template-columns: 8fr 4fr;
     gap: 2rem;
     section {
-        margin-top: -5.6rem;
+        margin-block-start: -5.6rem;
+    }
+    aside {
+        margin-block-start: -19.2rem;
     }
     article {
         grid-column: 1 / -1;
+    }
+}
+
+@media (width <= 992px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        section {
+        }
+        aside {
+            margin-block-start: unset;
+        }
+        article {
+            grid-column: unset;
+        }
     }
 }
