@@ -1,50 +1,13 @@
 <div class="navbar">
-    <ul>
-        <ng-template #recursiveList let-list>
-            <li *ngFor="let item of list" [ngClass]="item.options?.className?.join(' ')">
-                <ng-container
-                    [ngTemplateOutlet]="item.options?.component ? components : inside"
-                    [ngTemplateOutletContext]="{$implicit: item}"
-                >
-                </ng-container>
-            </li>
-        </ng-template>
-
-        <ng-container
-            [ngTemplateOutlet]="recursiveList"
-            [ngTemplateOutletContext]="{$implicit: navItemList}"
-        ></ng-container>
-    </ul>
-</div>
-
-<ng-template #components let-item>
-    <ng-container [ngSwitch]="item.options.component">
-        <ng-container *ngSwitchCase="'button'">
-            <app-dynamic-button
-                [label]="item.displayName"
-                buttonColor="var(--gray-color-lightest)"
-                buttonBackgroundColor="var(--primary-color-normal)"
-                buttonBackgroundHoverColor="var(--primary-color-dark)"
-                [buttonFullWidth]="true"
-                [buttonMultiple]="0.75"
-            ></app-dynamic-button>
-        </ng-container>
-
-        <ng-container *ngSwitchCase="'underline'">
-            <div class="underline">
-                <span></span>
-            </div>
-        </ng-container>
-    </ng-container>
-</ng-template>
-
-<ng-template #inside let-item>
-    <div class="display-name">
-        <span *ngIf="item.displayName">{{ item.displayName }}</span>
-        <span *ngIf="item.options?.extra?.label" class="navbar__label">{{ item.options.extra.label }}</span>
-        <app-dynamic-icon *ngIf="item.iconName" [iconShape]="item.iconName"></app-dynamic-icon>
+    <a class="navbar__logo" routerLink="/">
+        <img src="https://codescandy.com/geeks-bootstrap-5/assets/images/brand/logo/logo.svg" alt="Geeks logo" />
+    </a>
+    <div class="navbar__side">
+        <app-navbar-list></app-navbar-list>
+        <div class="navbar__search-box circle"></div>
+        <div class="navbar__side--right">
+            <div class="navbar__notification circle"></div>
+            <div class="profile circle"></div>
+        </div>
     </div>
-    <ul *ngIf="item.children.length > 0">
-        <ng-container *ngTemplateOutlet="recursiveList; context: {$implicit: item.children}"></ng-container>
-    </ul>
-</ng-template>
+</div>

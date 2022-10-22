@@ -9,9 +9,10 @@ import {LandingModule} from './pages/landing/landing.module';
 import {ConvertTimeModule} from './pipes/convert-time/convert-time.module';
 import {ProductModule} from './pages/product/product.module';
 import {SharedModule} from './components/shared/shared.module';
+import { NavbarListComponent } from './components/navbar/components/navbar-list/navbar-list.component';
 
 @NgModule({
-    declarations: [AppComponent, NavbarComponent, FooterComponent],
+    declarations: [AppComponent, NavbarComponent, FooterComponent, NavbarListComponent],
     imports: [BrowserModule, AppRoutingModule, LandingModule, ConvertTimeModule, ProductModule, SharedModule],
     providers: [],
     bootstrap: [AppComponent],

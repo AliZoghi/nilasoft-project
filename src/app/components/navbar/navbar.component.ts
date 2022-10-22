@@ -6,7 +6,4 @@ import {NavItem, NavItemFake} from '../../models/NavItem.interface';
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
-    public navItemList: NavItem[] = NavItemFake;
-    public harchi = 'khar';
-}
+export class NavbarComponent {}
