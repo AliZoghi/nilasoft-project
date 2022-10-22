@@ -1,13 +1,23 @@
-<div class="navbar__container">
+<div class="navbar">
     <ul>
         <ng-template #recursiveList let-list>
-            <li *ngFor="let item of list">
-                {{ item.displayName }}
+            <li *ngFor="let item of list" [class.heading]="item.options?.style?.heading">
+                <div class="display-name">
+                    <span *ngIf="item.displayName">{{ item.displayName }}</span>
+                    <app-dynamic-icon *ngIf="item.iconName" [iconShape]="item.iconName"></app-dynamic-icon>
+                    <span *ngIf="item.options?.component?.label" class="navbar__label">{{
+                        item.options.component.label
+                    }}</span>
+                    <span *ngIf="item.options?.style?.border" class="navbar__border"></span>
+                </div>
                 <ul *ngIf="item.children.length > 0">
                     <ng-container *ngTemplateOutlet="recursiveList; context: {$implicit: item.children}"></ng-container>
                 </ul>
             </li>
         </ng-template>
-        <ng-container *ngTemplateOutlet="recursiveList; context: {$implicit: list}"></ng-container>
+        <ng-container
+            [ngTemplateOutlet]="recursiveList"
+            [ngTemplateOutletContext]="{$implicit: navItemList}"
+        ></ng-container>
     </ul>
 </div>
