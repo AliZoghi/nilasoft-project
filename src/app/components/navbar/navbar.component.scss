@@ -1,5 +1,9 @@
 .navbar {
     padding-block: 1.8rem;
+    app-dynamic-button {
+        text-align: center;
+        font-size: var(--font-size-detail);
+    }
     &__label {
         background-color: var(--primary-color-normal);
         color: var(--gray-color-lightest);
@@ -8,11 +12,15 @@
         border-radius: var(--border-radius);
     }
     &__border {
-        height: 1px;
+        padding: 0.8rem 1.6rem;
+
         width: 100%;
-        background-color: var(--gray-color-normal);
-        padding: 0;
-        margin-block: 1.6rem;
+        & > span {
+            display: inline-block;
+            height: 2px;
+            width: 100%;
+            background-color: var(--gray-color-normal);
+        }
     }
 
     ul {
@@ -22,17 +30,31 @@
             display: inline-block;
             cursor: pointer;
             font-weight: 500;
+
             &.heading {
-                color: var(--gray-color-dark);
-                font-size: var(--font-size-detail);
-                cursor: default;
-                background-color: unset;
                 text-transform: uppercase;
+            }
+            &.color-gray {
+                color: var(--gray-color-dark) !important;
+
                 &:hover {
-                    color: var(--gray-color-dark);
-                    background-color: transparent;
+                    color: var(--gray-color-dark) !important;
                 }
             }
+            &.no-class {
+                font-size: var(--font-size-detail);
+                cursor: default;
+                background-color: unset !important;
+
+                &:hover {
+                    background-color: transparent !important;
+                    color: var(--primary-color-darker);
+                }
+            }
+            &.padding-inline {
+                padding-inline: 1.6rem;
+            }
+
             &:hover {
                 color: var(--primary-color-normal);
                 background-color: var(--gray-color-normal);
@@ -59,9 +81,12 @@
         & > li {
             font-size: var(--font-size-paragraph);
             color: var(--primary-color-darker);
-            padding: 1.2rem;
-            //vertical-align: top;
             position: relative;
+
+            //padding: 1.2rem;
+            & > .display-name {
+                padding: 1.2rem;
+            }
 
             ul {
                 opacity: 0;
@@ -78,7 +103,9 @@
                 width: 200px;
 
                 li {
-                    padding: 0.8rem 1.6rem;
+                    & .display-name {
+                        padding: 0.8rem 1.6rem;
+                    }
                     position: relative;
                     ul {
                         position: absolute;

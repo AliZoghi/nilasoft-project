@@ -1,23 +1,58 @@
 <div class="navbar">
     <ul>
         <ng-template #recursiveList let-list>
-            <li *ngFor="let item of list" [class.heading]="item.options?.style?.heading">
-                <div class="display-name">
-                    <span *ngIf="item.displayName">{{ item.displayName }}</span>
-                    <app-dynamic-icon *ngIf="item.iconName" [iconShape]="item.iconName"></app-dynamic-icon>
-                    <span *ngIf="item.options?.component?.label" class="navbar__label">{{
-                        item.options.component.label
-                    }}</span>
-                    <span *ngIf="item.options?.style?.border" class="navbar__border"></span>
-                </div>
-                <ul *ngIf="item.children.length > 0">
-                    <ng-container *ngTemplateOutlet="recursiveList; context: {$implicit: item.children}"></ng-container>
-                </ul>
+            <li
+                *ngFor="let item of list"
+                [ngClass]="{
+                    'no-class': item.options?.className?.noClass,
+                    'color-gray': item.options?.className?.colorGray,
+                    'padding-inline': item.options?.className?.padding,
+                    heading: item.options?.className?.heading
+                }"
+            >
+                <ng-container
+                    [ngTemplateOutlet]="item.options?.component ? components : inside"
+                    [ngTemplateOutletContext]="{$implicit: item}"
+                >
+                </ng-container>
             </li>
         </ng-template>
+
         <ng-container
             [ngTemplateOutlet]="recursiveList"
             [ngTemplateOutletContext]="{$implicit: navItemList}"
         ></ng-container>
     </ul>
 </div>
+
+<ng-template #components let-item>
+    <ng-container [ngSwitch]="item.options.component">
+        <ng-container *ngSwitchCase="'button'">
+            <app-dynamic-button
+                [label]="item.displayName"
+                buttonColor="var(--gray-color-lightest)"
+                buttonBackgroundColor="var(--primary-color-normal)"
+                buttonBackgroundHoverColor="var(--primary-color-dark)"
+                [buttonFullWidth]="true"
+                [buttonMultiple]="0.75"
+            ></app-dynamic-button>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="'border'">
+            <div class="navbar__border">
+                <span></span>
+            </div>
+        </ng-container>
+    </ng-container>
+</ng-template>
+
+<ng-template #inside let-item>
+    <div class="display-name">
+        <span *ngIf="item.displayName">{{ item.displayName }}</span>
+        <span *ngIf="item.options?.extra?.label" class="navbar__label">{{ item.options.extra.label }}</span>
+        <app-dynamic-icon *ngIf="item.iconName" [iconShape]="item.iconName"></app-dynamic-icon>
+    </div>
+    <ul *ngIf="item.children.length > 0">
+        <ng-container *ngTemplateOutlet="recursiveList; context: {$implicit: item.children}"></ng-container>
+    </ul>
+</ng-template>

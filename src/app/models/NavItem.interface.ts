@@ -149,8 +149,10 @@ export const NavItemFake: NavItem[] = [
             {
                 displayName: 'Landings',
                 options: {
-                    style: {
+                    className: {
                         heading: true,
+                        colorGray: true,
+                        noClass: true,
                     },
                 },
                 children: [],
@@ -158,7 +160,7 @@ export const NavItemFake: NavItem[] = [
             {
                 displayName: 'Home Academy',
                 options: {
-                    component: {
+                    extra: {
                         label: 'New',
                     },
                 },
@@ -380,8 +382,10 @@ export const NavItemFake: NavItem[] = [
             {
                 displayName: '',
                 options: {
-                    style: {
+                    component: 'border',
+                    className: {
                         border: true,
+                        noClass: true,
                     },
                 },
                 children: [],
@@ -445,7 +449,13 @@ export const NavItemFake: NavItem[] = [
         children: [
             {
                 displayName: 'Accounts',
-
+                options: {
+                    className: {
+                        heading: true,
+                        colorGray: true,
+                        noClass: true,
+                    },
+                },
                 children: [],
             },
             {
@@ -454,12 +464,33 @@ export const NavItemFake: NavItem[] = [
                 children: [
                     {
                         displayName: 'Instructor',
-
+                        options: {
+                            className: {
+                                heading: true,
+                                noClass: true,
+                            },
+                        },
                         children: [],
                     },
                     {
                         displayName: 'Instructor dashboard for manage courses and earning.',
-
+                        options: {
+                            className: {
+                                noClass: true,
+                                colorGray: true,
+                            },
+                        },
+                        children: [],
+                    },
+                    {
+                        displayName: '',
+                        options: {
+                            component: 'border',
+                            className: {
+                                border: true,
+                                noClass: true,
+                            },
+                        },
                         children: [],
                     },
                     {
@@ -505,6 +536,11 @@ export const NavItemFake: NavItem[] = [
                     },
                     {
                         displayName: 'Quiz',
+                        options: {
+                            extra: {
+                                label: 'New',
+                            },
+                        },
                         iconName: 'angle-right',
                         children: [
                             {
@@ -532,17 +568,33 @@ export const NavItemFake: NavItem[] = [
                 children: [
                     {
                         displayName: 'Students',
-
+                        options: {
+                            className: {
+                                heading: true,
+                                noClass: true,
+                            },
+                        },
                         children: [],
                     },
                     {
                         displayName: 'Students dashboard to manage your courses and subscriptions.',
-
+                        options: {
+                            className: {
+                                noClass: true,
+                                colorGray: true,
+                            },
+                        },
                         children: [],
                     },
                     {
-                        displayName: '&nbsp;',
-
+                        displayName: '',
+                        options: {
+                            component: 'border',
+                            className: {
+                                border: true,
+                                noClass: true,
+                            },
+                        },
                         children: [],
                     },
                     {
@@ -587,6 +639,11 @@ export const NavItemFake: NavItem[] = [
                     },
                     {
                         displayName: 'Quiz',
+                        options: {
+                            extra: {
+                                label: 'New',
+                            },
+                        },
                         iconName: 'angle-right',
                         children: [
                             {
@@ -619,30 +676,57 @@ export const NavItemFake: NavItem[] = [
                 children: [
                     {
                         displayName: 'Master Admin',
-
+                        options: {
+                            className: {
+                                heading: true,
+                                noClass: true,
+                            },
+                        },
                         children: [],
                     },
                     {
                         displayName:
                             'Master admin dashboard to manage courses, user, site setting , and work with amazing apps.',
-
+                        options: {
+                            className: {
+                                noClass: true,
+                                colorGray: true,
+                            },
+                        },
                         children: [],
                     },
                     {
-                        displayName: '&nbsp;',
-
+                        displayName: '',
+                        options: {
+                            component: 'border',
+                            className: {
+                                border: true,
+                                noClass: true,
+                            },
+                        },
                         children: [],
                     },
                     {
                         displayName: 'Go to Dashboard',
-
+                        options: {
+                            component: 'button',
+                            className: {
+                                padding: true,
+                            },
+                        },
                         children: [],
                     },
                 ],
             },
             {
-                displayName: '&nbsp;',
-
+                displayName: '',
+                options: {
+                    component: 'border',
+                    className: {
+                        border: true,
+                        noClass: true,
+                    },
+                },
                 children: [],
             },
             {
