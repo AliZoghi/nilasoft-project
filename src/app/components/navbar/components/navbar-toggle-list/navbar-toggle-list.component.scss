@@ -1,0 +1,40 @@
+.toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 4.5rem;
+    //height: 3rem;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border: 1px solid var(--primary-color-normal);
+    border-radius: var(--border-radius);
+    &__underline {
+        height: 0.2rem;
+        width: 100%;
+        background-color: var(--primary-color-normal);
+        display: block;
+        transition: 300ms ease;
+        transition-property: transform, opacity;
+        &--first {
+            transform-origin: 15% 15%;
+        }
+        &--last {
+            transform-origin: 15% 85%;
+        }
+    }
+
+    &.open {
+        .toggle__underline {
+            &--first {
+                transform: rotate(40deg);
+            }
+            &--middle {
+                opacity: 0;
+            }
+            &--last {
+                transform: rotate(-40deg);
+            }
+        }
+    }
+}

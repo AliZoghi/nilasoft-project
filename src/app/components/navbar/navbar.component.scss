@@ -4,8 +4,6 @@
     align-items: center;
     gap: 1rem;
     background-color: var(--gray-color-lightest);
-    &__logo {
-    }
 
     &__side {
         flex: 1;
@@ -15,10 +13,18 @@
         app-navbar-search {
             flex-basis: 28rem;
         }
+        app-navbar-toggle-list {
+            display: none;
+        }
+
+        &--left,
+        &--right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
         &--right {
             margin-inline-start: auto;
-            display: flex;
-            gap: 1rem;
         }
     }
 
@@ -30,5 +36,19 @@
     }
     &__search-box {
         width: 27rem !important;
+    }
+}
+
+@media (width <= 992px) {
+    .navbar {
+        &__side {
+            app-navbar-toggle-list {
+                display: unset;
+            }
+
+            &--left {
+                display: none;
+            }
+        }
     }
 }

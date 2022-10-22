@@ -3,11 +3,14 @@
         <img src="https://codescandy.com/geeks-bootstrap-5/assets/images/brand/logo/logo.svg" alt="Geeks logo" />
     </a>
     <div class="navbar__side">
-        <app-navbar-list></app-navbar-list>
-        <app-navbar-search></app-navbar-search>
+        <div class="navbar__side--left">
+            <app-navbar-list></app-navbar-list>
+            <app-navbar-search></app-navbar-search>
+        </div>
         <div class="navbar__side--right">
             <div class="navbar__notification circle"></div>
             <div class="profile circle"></div>
         </div>
+        <app-navbar-toggle-list (click)="toggleNavbarOpen()" [isOpen]="navbarIsOpen"></app-navbar-toggle-list>
     </div>
 </div>
