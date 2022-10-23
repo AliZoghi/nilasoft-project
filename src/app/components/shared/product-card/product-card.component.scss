@@ -1,5 +1,4 @@
 .product {
-    cursor: pointer;
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
@@ -12,6 +11,7 @@
     }
     &__image {
         img {
+            cursor: pointer;
             border-top-left-radius: var(--border-radius);
             border-top-right-radius: var(--border-radius);
             height: 14rem;
@@ -22,6 +22,7 @@
     &__description {
         padding: 2.4rem;
         h4 {
+            cursor: pointer;
             color: var(--primary-color-darker);
             line-height: 1.4;
             transition: color 300ms ease;
