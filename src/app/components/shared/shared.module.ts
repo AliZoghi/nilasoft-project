@@ -7,6 +7,7 @@ import {RatingComponent} from './rating/rating.component';
 import {ConvertTimeModule} from '../../pipes/convert-time/convert-time.module';
 import {LevelSvgComponent} from './level-svg/level-svg.component';
 import {TooltipComponent} from './tooltip/tooltip.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,7 @@ import {TooltipComponent} from './tooltip/tooltip.component';
         LevelSvgComponent,
         TooltipComponent,
     ],
-    imports: [CommonModule, ConvertTimeModule],
+    imports: [CommonModule, ConvertTimeModule, RouterModule],
     exports: [
         DynamicButtonComponent,
         DynamicIconComponent,
