@@ -6,7 +6,7 @@
         "start": "ng serve",
         "watch": "ng build --watch --configuration development",
         "build": "ng build",
-        "build:prod": "ng build --base-href=/nilasoft/",
+        "build:prod": "ng build --base-href=/nilasoft-project/",
         "eslint:check": "ng lint",
         "eslint:fix": "ng lint --fix",
         "prettier:check": "prettier . --check",
