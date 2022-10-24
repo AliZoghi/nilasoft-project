@@ -77,3 +77,92 @@ export interface ProductRate {
 //     coursesNumber: 32,
 //     reviewsNumber: 12230,
 // };
+
+//    "result": "success",
+//    "data": [
+//        {
+//            "id": 7,
+//            "summary": "test",
+//            "enrolled": 1200,
+//            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg",
+//            "title": "The Python Course: build web application",
+//            "time": 150,
+//            "rate": {"averageRate": 4.5, "count": 13245},
+//            "level": "intermediate",
+//            "teacher": {
+//                "name": "Claire Robertson",
+//                "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+//            }
+//        },
+//        {
+//            "id": 2,
+//            "summary": "test",
+//            "enrolled": 1200,
+//            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-angular.jpg",
+//            "title": "The Python Course: build web application",
+//            "time": 150,
+//            "rate": {"averageRate": 4.5, "count": 13245},
+//            "level": "intermediate",
+//            "teacher": {
+//                "name": "Claire Robertson",
+//                "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+//            }
+//        },
+//        {
+//            "id": 3,
+//            "summary": "test",
+//            "enrolled": 1200,
+//            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-graphql.jpg",
+//            "title": "The Python Course: build web application",
+//            "time": 150,
+//            "rate": {"averageRate": 4.5, "count": 13245},
+//            "level": "intermediate",
+//            "teacher": {
+//                "name": "Claire Robertson",
+//                "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+//            }
+//        },
+//        {
+//            "id": 4,
+//            "summary": "test",
+//            "enrolled": 1200,
+//            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
+//            "title": "The Python Course: build web application",
+//            "time": 150,
+//            "rate": {"averageRate": 4.5, "count": 13245},
+//            "level": "intermediate",
+//            "teacher": {
+//                "name": "Claire Robertson",
+//                "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+//            }
+//        },
+//        {
+//            "id": 5,
+//            "summary": "test",
+//            "enrolled": 1200,
+//            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg",
+//            "title": "The Python Course: build web application",
+//            "time": 150,
+//            "rate": {"averageRate": 4.5, "count": 13245},
+//            "level": "intermediate",
+//            "teacher": {
+//                "name": "Claire Robertson",
+//                "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+//            }
+//        },
+//        {
+//            "id": 6,
+//            "summary": "test",
+//            "enrolled": 1200,
+//            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-graphql.jpg",
+//            "title": "The Python Course: build web application",
+//            "time": 150,
+//            "rate": {"averageRate": 4.5, "count": 13245},
+//            "level": "intermediate",
+//            "teacher": {
+//                "name": "Claire Robertson",
+//                "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+//            }
+//        }
+//    ]
+//}

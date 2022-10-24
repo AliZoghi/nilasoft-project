@@ -13,8 +13,10 @@
     </div>
     <div class="buy__description">
         <div class="buy__price">
-            <span>${{ productPriceSection.price.onSale }}</span>
-            <del>${{ productPriceSection.price.discount }}</del>
+            <span
+                >${{ productPriceSection.price.onSale | discountCalculator: productPriceSection.price.discount }}</span
+            >
+            <del *ngIf="productPriceSection.price.discount > 0">${{ productPriceSection.price.onSale }}</del>
         </div>
         <div class="buy__buttons">
             <app-dynamic-button

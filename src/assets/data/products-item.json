@@ -12,7 +12,7 @@
             "rate": {"averageRate": 4.5, "count": 13245},
             "price": {
                 "onSale": 750,
-                "discount": 0
+                "discount": 50
             },
             "teacherId": 1
         },
