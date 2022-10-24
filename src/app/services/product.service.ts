@@ -126,21 +126,17 @@ export class ProductService {
     // UTILITY
     private async getProductsCardByIds(ids: number[]): Promise<ProductCard[]> {
         const productsItem = await Promise.all(ids.map(async (id) => await this.getProductItemById(id)));
-        const productsCard = productsItem.map(async (product): Promise<ProductCard> => {
-            const teacherInformation = await this.getTeacherMinimalById(product.teacherId);
-            return {
-                information: product,
-                teacherInformation,
-            };
-        });
+        const productsCard = await Promise.all(
+            productsItem.map(async (product) => {
+                const teacherInformation = await this.getTeacherMinimalById(product.teacherId);
 
-        const teacherFake = await this.getTeacherById(1);
-        const harchi = productsItem.map((product): ProductCard => {
-            return {
-                teacherInformation: teacherFake,
-                information: product,
-            };
-        });
-        return harchi;
+                return {
+                    information: product,
+                    teacherInformation,
+                };
+            })
+        );
+
+        return productsCard;
     }
 }
