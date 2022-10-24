@@ -63,8 +63,7 @@ export class ProductService {
 
     public async getProductById(id: number): Promise<ProductComplete | -1> {
         const product = this.allProducts.find((product: any) => product.id === id) as ProductComplete;
-
-        return product && -1;
+        return product || -1;
     }
 
     public async getProductItemById(id: number): Promise<ProductItem> {
@@ -109,7 +108,7 @@ export class ProductService {
     }
 
     public async getRecommendedProduct(): Promise<ProductCard[]> {
-        const recommendedIdsCourse = [1, 2, 4, 6, 9, 3];
+        const recommendedIdsCourse = [1, 1, 1, 1, 1, 1, 1, 1];
         const recommendedCourses = await this.getProductsCardByIds(recommendedIdsCourse);
         return recommendedCourses;
     }
@@ -118,7 +117,7 @@ export class ProductService {
         const popularIdsCourse = this.allProductsItem
             .sort((a, b) => b.rate.averageRate - a.rate.averageRate)
             .map((product) => product.id)
-            .slice(0, 4);
+            .slice(0, 10);
 
         const popularProducts = await this.getProductsCardByIds(popularIdsCourse);
         return popularProducts;

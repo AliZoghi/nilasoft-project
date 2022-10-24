@@ -2,12 +2,15 @@
     <div
         class="product__image"
         (mousedown)="storeMousedownLocation($event)"
-        (mouseup)="checkValidRouteAndNavigate($event, 1)"
+        (mouseup)="checkValidRouteAndNavigate($event, productCard.information.id)"
     >
         <img [src]="productCard.information.image" [alt]="productCard.information.title" />
     </div>
     <div class="product__description">
-        <h4 (mousedown)="storeMousedownLocation($event)" (mouseup)="checkValidRouteAndNavigate($event, 1)">
+        <h4
+            (mousedown)="storeMousedownLocation($event)"
+            (mouseup)="checkValidRouteAndNavigate($event, productCard.information.id)"
+        >
             {{ productCard.information.title }}
         </h4>
         <div class="product__info">

@@ -17,6 +17,7 @@ export class ApiService {
             if (response.ok) return data as T;
             return null;
         } catch (err) {
+            console.error(err);
             return null;
         }
     }
