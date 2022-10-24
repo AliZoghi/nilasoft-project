@@ -1,0 +1,160 @@
+{
+    "result": "success",
+    "data": [
+        {
+            "info": {
+                "id": 1,
+                "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
+                "enrolled": 1200,
+                "title": "The Python Course: build web application",
+                "summary": "JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.",
+                "time": 150,
+                "rate": {"averageRate": 4.5, "count": 13245},
+                "level": "intermediate",
+                "teacher": {
+                    "name": "Claire Robertson",
+                    "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+                }
+            },
+            "fqa": [
+                {
+                    "question": "How this course help me to design layout?",
+                    "answer": "My name is Jason Woo and I work as human duct tape at Gatsby, that means that I do a lot of different things. Everything from dev roll to writing content to writing code. And I used to work as an architect at IBM. I live in Portland, Oregon."
+                },
+                {
+                    "question": "What is important of this course?",
+                    "answer": "We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way to write React components in your markdown."
+                },
+                {
+                    "question": "Why Take This Course?",
+                    "answer": "We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way to write React components in your markdown."
+                },
+                {
+                    "question": "Is able to create application after this course?",
+                    "answer": "We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way to write React components in your markdown."
+                }
+            ],
+            "descriptions": {
+                "description": [
+                    "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
+                    "Next, you’ll explore the basics of the language, giving plenty of examples. Lastly, you’ll put your JavaScript knowledge to work and modify a modern, responsive web page. When you’re finished with this course, you’ll have the skills and knowledge in JavaScript to create simple programs, create simple web applications, and modify web pages."
+                ],
+                "summary": [
+                    "Maecenas viverra condimentum nulla molestie condimentum. Nunc ex libero, feugiat quis lectus vel, ornare euismod ligula. Aenean sit amet arcu nulla.",
+                    "Duis facilisis ex a urna blandit ultricies. Nullam sagittis ligula non eros semper, nec mattis odio ullamcorper. Phasellus feugiat sit amet leo eget consectetur."
+                ],
+                "learnList": [
+                    "Recognize the importance of understanding your objectives when addressing an audience.",
+                    "Identify the fundaments of composing a successful close.",
+                    "Explore how to connect with your audience through crafting compelling stories.",
+                    "Examine ways to connect with your audience by personalizing your content.",
+                    "Explore how to communicate the unknown in an impromptu communication.",
+                    "Break down the best ways to exude executive presence."
+                ]
+            },
+            "teacherInformation": {
+                "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-1.jpg",
+                "name": "jenny wilson",
+                "summary": "I am an Innovation designer focussing on UX/UI based in Berlin. As a creative resident at Figma explored the city of the future and how new technologies.",
+                "field": ["Front-end Developer", "Designer"],
+                "rating": 4.5,
+                "studentNumber": 11604,
+                "coursesNumber": 32,
+                "reviewsNumber": 12230
+            },
+            "advantages": [
+                {"color": "var(--primary-color-normal)", "icon": "circle-play", "label": "12 hours video"},
+                {"color": "var(--tertiary-color-normal)", "icon": "file-certificate", "label": "Certificate"},
+                {"color": "var(--quaternary-color-normal)", "icon": "calendar", "label": "12 Article"},
+                {"color": "var(--gray-color-dark)", "icon": "video", "label": "Watch Offline"},
+                {"color": "var(--secondary-color-normal)", "icon": "clock", "label": "Lifetime access"}
+            ],
+            "relatedCourses": [
+                {
+                    "id": 7,
+                    "summary": "test",
+                    "enrolled": 1200,
+                    "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg",
+                    "title": "The Python Course: build web application",
+                    "time": 150,
+                    "rate": {"averageRate": 4.5, "count": 13245},
+                    "level": "intermediate",
+                    "teacher": {
+                        "name": "Claire Robertson",
+                        "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+                    }
+                },
+                {
+                    "id": 2,
+                    "summary": "test",
+                    "enrolled": 1200,
+                    "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-angular.jpg",
+                    "title": "The Python Course: build web application",
+                    "time": 150,
+                    "rate": {"averageRate": 4.5, "count": 13245},
+                    "level": "intermediate",
+                    "teacher": {
+                        "name": "Claire Robertson",
+                        "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+                    }
+                },
+                {
+                    "id": 3,
+                    "summary": "test",
+                    "enrolled": 1200,
+                    "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-graphql.jpg",
+                    "title": "The Python Course: build web application",
+                    "time": 150,
+                    "rate": {"averageRate": 4.5, "count": 13245},
+                    "level": "intermediate",
+                    "teacher": {
+                        "name": "Claire Robertson",
+                        "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+                    }
+                },
+                {
+                    "id": 4,
+                    "summary": "test",
+                    "enrolled": 1200,
+                    "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
+                    "title": "The Python Course: build web application",
+                    "time": 150,
+                    "rate": {"averageRate": 4.5, "count": 13245},
+                    "level": "intermediate",
+                    "teacher": {
+                        "name": "Claire Robertson",
+                        "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+                    }
+                },
+                {
+                    "id": 5,
+                    "summary": "test",
+                    "enrolled": 1200,
+                    "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg",
+                    "title": "The Python Course: build web application",
+                    "time": 150,
+                    "rate": {"averageRate": 4.5, "count": 13245},
+                    "level": "intermediate",
+                    "teacher": {
+                        "name": "Claire Robertson",
+                        "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+                    }
+                },
+                {
+                    "id": 6,
+                    "summary": "test",
+                    "enrolled": 1200,
+                    "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-graphql.jpg",
+                    "title": "The Python Course: build web application",
+                    "time": 150,
+                    "rate": {"averageRate": 4.5, "count": 13245},
+                    "level": "intermediate",
+                    "teacher": {
+                        "name": "Claire Robertson",
+                        "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -23,6 +23,7 @@ export interface ProductRate {
     averageRate: number;
 }
 
+//
 export const ProductItemFake: ProductItem[] = [
     {
         image: 'https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg',

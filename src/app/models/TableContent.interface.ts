@@ -4,6 +4,11 @@ export interface TableDescription {
     summary: string[];
 }
 
+export interface TableFQA {
+    question: string;
+    answer: string;
+}
+
 export const tableDescriptionFake: TableDescription = {
     description: [
         "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
@@ -23,10 +28,6 @@ export const tableDescriptionFake: TableDescription = {
     ],
 };
 
-export interface TableFQA {
-    question: string;
-    answer: string;
-}
 export const tableFQAFake: TableFQA[] = [
     {
         question: 'How this course help me to design layout?',
