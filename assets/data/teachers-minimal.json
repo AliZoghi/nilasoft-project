@@ -1,0 +1,56 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "id": 1,
+            "name": "Claire Robertson",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Kelly Johns",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-2.jpg"
+        },
+
+        {
+            "id": 3,
+            "name": "Lea Borer",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Maynard Rice",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Brooks Kirlin",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-5.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Mathilde O'Connell",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-6.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Ettie Stoltenberg",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-7.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Miles Beier",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-8.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Kyleigh Ziemann",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-9.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Daniel Kinney",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-10.jpg"
+        }
+    ]
+}
