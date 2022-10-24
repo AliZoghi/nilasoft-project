@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {ProductAdvantageItem, productAdvantageList} from '../../../../../../models/ProductPage.interface';
+import {ProductAdvantageItem, productAdvantageList} from '../../../../../../models/product/Product.interface';
 
 @Component({
     selector: 'app-product-advantages',

@@ -1,0 +1,18 @@
+{
+    "result": "success",
+    "data": [
+        {
+            "id": 1,
+            "name": "Claire Robertson",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg",
+            "summary": "I am an Innovation designer focussing on UX/UI based in Berlin. As a creative resident at Figma explored the city of the future and how new technologies.",
+            "fields": ["Front-end Developer", "Designer"],
+            "rating": 4.5,
+            "statistics": {
+                "studentNumber": 11604,
+                "coursesNumber": 32,
+                "reviewsNumber": 12230
+            }
+        }
+    ]
+}

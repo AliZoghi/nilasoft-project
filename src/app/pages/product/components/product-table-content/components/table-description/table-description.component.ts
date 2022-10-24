@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TableDescription, tableDescriptionFake} from '../../../../../../models/TableContent.interface';
+import {TableDescription, tableDescriptionFake} from '../../../../../../models/product/ProductTableData.interface';
 
 @Component({
     selector: 'app-table-description',

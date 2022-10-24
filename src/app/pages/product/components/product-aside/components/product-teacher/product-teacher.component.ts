@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {productTeacherInfo, ProductTeacherInfo} from '../../../../../../models/ProductPage.interface';
+import {productTeacherInfo, ProductTeacherInfo} from '../../../../../../models/product/Product.interface';
 
 @Component({
     selector: 'app-product-teacher',

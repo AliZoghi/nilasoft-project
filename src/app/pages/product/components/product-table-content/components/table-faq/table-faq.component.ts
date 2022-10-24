@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TableFQA, tableFQAFake} from '../../../../../../models/TableContent.interface';
+import {TableFQA, tableFQAFake} from '../../../../../../models/product/ProductTableData.interface';
 
 @Component({
     selector: 'app-table-faq',

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {GetRequestOptions, RequestOptions} from '../models/request-options.interface';
+import {GetRequestOptions, RequestOptions} from '../models/api/request-options.interface';
 
 @Injectable({
     providedIn: 'root',
