@@ -12,7 +12,13 @@ export class LandingComponent implements OnInit {
     public popularProducts!: ProductCard[];
     public constructor(private productService: ProductService) {}
     public async ngOnInit(): Promise<void> {
-        this.recommendedProducts = await this.productService.getRecommendedProduct();
-        this.popularProducts = await this.productService.getPopularProduct();
+        this.recommendedProducts =
+            this.productService.productsRecommended.length === 0
+                ? await this.productService.getRecommendedProduct()
+                : this.productService.productsRecommended;
+        this.popularProducts =
+            this.productService.productsPopular.length === 0
+                ? await this.productService.getPopularProduct()
+                : this.productService.productsPopular;
     }
 }

@@ -23,8 +23,8 @@ export class ProductService {
     private teachersMinimalSubject = new BehaviorSubject<ProductTeacherMinimal[]>([]);
 
     public currentProductPageSubject = new BehaviorSubject<ProductComplete | null>(null);
-    public productsRecommended: ProductItem[] = [];
-    public productsPopular: ProductItem[] = [];
+    public productsRecommended: ProductCard[] = [];
+    public productsPopular: ProductCard[] = [];
 
     private get allProducts(): ProductComplete[] {
         return this.productsSubject.value;
@@ -110,6 +110,7 @@ export class ProductService {
     public async getRecommendedProduct(): Promise<ProductCard[]> {
         const recommendedIdsCourse = [1, 2, 3, 4, 5];
         const recommendedCourses = await this.getProductsCardByIds(recommendedIdsCourse);
+        this.productsRecommended = recommendedCourses;
         return recommendedCourses;
     }
 
@@ -120,6 +121,8 @@ export class ProductService {
             .slice(0, 10);
 
         const popularProducts = await this.getProductsCardByIds(popularIdsCourse);
+        this.productsPopular = popularProducts;
+
         return popularProducts;
     }
 
