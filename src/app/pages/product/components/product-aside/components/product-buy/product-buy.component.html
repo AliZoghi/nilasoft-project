@@ -1,6 +1,6 @@
 <div class="buy">
     <div class="buy__video">
-        <div class="buy__video-image"></div>
+        <div class="buy__video-image" [style.background-image]="'url(' + productPriceSection.image + ')'"></div>
         <app-dynamic-icon
             iconShape="play"
             iconColor="var(--primary-color-normal)"
@@ -13,8 +13,10 @@
     </div>
     <div class="buy__description">
         <div class="buy__price">
-            <span>${{ 600 }}</span>
-            <del>${{ 750 }}</del>
+            <span
+                >${{ productPriceSection.price.onSale | discountCalculator: productPriceSection.price.discount }}</span
+            >
+            <del *ngIf="productPriceSection.price.discount > 0">${{ productPriceSection.price.onSale }}</del>
         </div>
         <div class="buy__buttons">
             <app-dynamic-button

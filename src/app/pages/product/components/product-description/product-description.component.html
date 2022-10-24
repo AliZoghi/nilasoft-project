@@ -1,10 +1,9 @@
 <div class="product">
     <div class="container product__container">
         <div>
-            <h1>Getting Started with JavaScript</h1>
+            <h1>{{ productInfo.title }}</h1>
             <p>
-                JavaScript is the popular programming language which powers web pages and web applications. This course
-                will get you started coding in JavaScript.
+                {{ productInfo.summary }}
             </p>
             <div class="product__labels">
                 <app-tooltip tooltipText="Add to Bookmarks">
@@ -15,11 +14,15 @@
                 </app-tooltip>
                 <div class="members">
                     <app-dynamic-icon iconShape="user" iconColor="var(--gray-color-dark)"></app-dynamic-icon>
-                    <span>1200</span>
+                    <span>{{ productInfo.enrolledNumber }}</span>
                     Enrolled
                 </div>
-                <app-rating [rateShown]="false" countSize="var(--font-size-paragraph)" [rateObj]="rateObj"></app-rating>
-                <app-level-svg fillColor="var(--gray-color-normal)">Intermediate</app-level-svg>
+                <app-rating
+                    [rateShown]="false"
+                    countSize="var(--font-size-paragraph)"
+                    [rateObj]="productInfo.rate"
+                ></app-rating>
+                <app-level-svg fillColor="var(--gray-color-normal)">{{ productInfo.level }}</app-level-svg>
             </div>
         </div>
     </div>

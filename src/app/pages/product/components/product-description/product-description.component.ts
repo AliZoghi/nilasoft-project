@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {ProductRate} from '../../../../models/ProductItem.interface';
+import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'app-product-description',
@@ -7,5 +6,5 @@ import {ProductRate} from '../../../../models/ProductItem.interface';
     styleUrls: ['./product-description.component.scss'],
 })
 export class ProductDescriptionComponent {
-    public rateObj: ProductRate = {averageRate: 3.2, count: 140};
+    @Input() public productInfo!: any;
 }

@@ -1,6 +1,7 @@
-import {Component, Input} from '@angular/core';
-import {ProductItem} from '../../../models/ProductItem.interface';
+import {Component, Input, OnInit} from '@angular/core';
+
 import {Router} from '@angular/router';
+import {ProductCard, ProductItem} from '../../../models/product/Product.interface';
 interface MouseEventInterface {
     x: number;
     y: number;
@@ -11,7 +12,7 @@ interface MouseEventInterface {
     styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent {
-    @Input() public productItem!: ProductItem;
+    @Input() public productCard!: ProductCard;
     private mousedownLocation!: MouseEventInterface;
 
     public constructor(private router: Router) {}
@@ -28,6 +29,11 @@ export class ProductCardComponent {
     }
 
     private async navigateProduct(id: number): Promise<void> {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
         await this.router.navigate(['/product', id]);
     }
 }

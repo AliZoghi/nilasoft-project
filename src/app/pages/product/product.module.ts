@@ -11,6 +11,7 @@ import {ProductBuyComponent} from './components/product-aside/components/product
 import {ProductAdvantagesComponent} from './components/product-aside/components/product-advantages/product-advantages.component';
 import {ProductTeacherComponent} from './components/product-aside/components/product-teacher/product-teacher.component';
 import {ProductRelatedComponent} from './components/product-related/product-related.component';
+import {DiscountCalculatorModule} from '../../pipes/discount-calculator/discount-calculator.module';
 
 @NgModule({
     declarations: [
@@ -49,6 +50,7 @@ import {ProductRelatedComponent} from './components/product-related/product-rela
                 ],
             },
         ]),
+        DiscountCalculatorModule,
     ],
 })
 export class ProductModule {}

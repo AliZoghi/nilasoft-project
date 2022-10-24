@@ -2,8 +2,8 @@
     <h2>{{ sliderTitle }}</h2>
     <div class="product__container">
         <div class="product__cards" #slider>
-            <ng-container *ngFor="let productItem of productItems">
-                <app-product-card [productItem]="productItem"></app-product-card>
+            <ng-container *ngFor="let productCard of productsCards">
+                <app-product-card [productCard]="productCard"></app-product-card>
             </ng-container>
         </div>
 

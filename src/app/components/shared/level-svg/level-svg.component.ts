@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {ProductLevelEnum} from '../../../models/ProductItem.interface';
+import {ProductLevelEnum} from '../../../models/product/Product.interface';
 
 @Component({
     selector: 'app-level-svg',
@@ -7,7 +7,8 @@ import {ProductLevelEnum} from '../../../models/ProductItem.interface';
     styleUrls: ['./level-svg.component.scss'],
 })
 export class LevelSvgComponent {
-    @Input() public level: ProductLevelEnum = ProductLevelEnum.advance;
+    // @Input() public level: ProductLevelEnum = ProductLevelEnum.advance;
+    @Input() public level: string = 'advance';
     @Input() public size?: string = '1.6rem';
     @Input() public fillColor?: string = '#754FFE';
     @Input() public emptyColor?: string = '#DBD8E9';

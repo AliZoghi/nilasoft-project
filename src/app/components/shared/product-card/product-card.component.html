@@ -2,29 +2,32 @@
     <div
         class="product__image"
         (mousedown)="storeMousedownLocation($event)"
-        (mouseup)="checkValidRouteAndNavigate($event, 1)"
+        (mouseup)="checkValidRouteAndNavigate($event, productCard.information.id)"
     >
-        <img [src]="productItem.image" [alt]="productItem.title" />
+        <img [src]="productCard.information.image" [alt]="productCard.information.title" />
     </div>
     <div class="product__description">
-        <h4 (mousedown)="storeMousedownLocation($event)" (mouseup)="checkValidRouteAndNavigate($event, 1)">
-            {{ productItem.title }}
+        <h4
+            (mousedown)="storeMousedownLocation($event)"
+            (mouseup)="checkValidRouteAndNavigate($event, productCard.information.id)"
+        >
+            {{ productCard.information.title }}
         </h4>
         <div class="product__info">
             <div class="product__time">
                 <app-dynamic-icon iconShape="clock"> </app-dynamic-icon>
-                <span>{{ productItem.time | convertTime }}</span>
+                <span>{{ productCard.information.time | convertTime }}</span>
             </div>
-            <app-level-svg [level]="productItem.level">
-                {{ productItem.level }}
+            <app-level-svg [level]="productCard.information.level">
+                {{ productCard.information.level }}
             </app-level-svg>
         </div>
-        <app-rating [rateObj]="productItem.rate"></app-rating>
+        <app-rating [rateObj]="productCard.information.rate"></app-rating>
     </div>
     <div class="product__footer">
         <div class="product__teacher">
-            <img [src]="productItem.teacher.image" [alt]="productItem.teacher.name" />
-            <span>{{ productItem.teacher.name }}</span>
+            <img [src]="productCard.teacherInformation.image" [alt]="productCard.teacherInformation.name" />
+            <span>{{ productCard.teacherInformation.name }}</span>
         </div>
         <app-tooltip tooltipText="Add to Bookmarks">
             <app-dynamic-icon iconShape="bookmark"></app-dynamic-icon>
