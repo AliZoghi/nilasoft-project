@@ -93,7 +93,7 @@ export class ProductService {
 
         this.currentProductPageSubject.next(product);
         const productInfo = await this.getProductItemById(id);
-        const relatedCourses: ProductItem[] = await this.getProductsByIds(product.relatedCoursesId);
+        const relatedCourses: ProductCard[] = await this.getProductsCardByIds(product.relatedCoursesId);
 
         const teacher = await this.getTeacherById(product.teacherId);
         const productPageData: ProductPage = {
@@ -108,25 +108,40 @@ export class ProductService {
         return productPageData;
     }
 
-    public async getRecommendedProduct(): Promise<ProductItem[]> {
+    public async getRecommendedProduct(): Promise<ProductCard[]> {
         const recommendedIdsCourse = [1, 2, 4, 6, 9, 3];
-        const recommendedCourses = await this.getProductsByIds(recommendedIdsCourse);
+        const recommendedCourses = await this.getProductsCardByIds(recommendedIdsCourse);
         return recommendedCourses;
     }
 
-    public async getPopularProduct(): Promise<ProductItem[]> {
+    public async getPopularProduct(): Promise<ProductCard[]> {
         const popularIdsCourse = this.allProductsItem
             .sort((a, b) => b.rate.averageRate - a.rate.averageRate)
             .map((product) => product.id)
             .slice(0, 4);
 
-        const popularProducts = await this.getProductsByIds(popularIdsCourse);
+        const popularProducts = await this.getProductsCardByIds(popularIdsCourse);
         return popularProducts;
     }
 
     // UTILITY
-    private async getProductsByIds(ids: number[]): Promise<ProductItem[]> {
-        const products = await Promise.all(ids.map(async (id) => await this.getProductItemById(id)));
-        return products;
+    private async getProductsCardByIds(ids: number[]): Promise<ProductCard[]> {
+        const productsItem = await Promise.all(ids.map(async (id) => await this.getProductItemById(id)));
+        const productsCard = productsItem.map(async (product): Promise<ProductCard> => {
+            const teacherInformation = await this.getTeacherMinimalById(product.teacherId);
+            return {
+                information: product,
+                teacherInformation,
+            };
+        });
+
+        const teacherFake = await this.getTeacherById(1);
+        const harchi = productsItem.map((product): ProductCard => {
+            return {
+                teacherInformation: teacherFake,
+                information: product,
+            };
+        });
+        return harchi;
     }
 }

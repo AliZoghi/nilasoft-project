@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from '../../services/product.service';
-import { ActivatedRoute, Params, Router } from "@angular/router";
-import { ProductPage } from "../../models/product/Product.interface";
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {ProductPage} from '../../models/product/Product.interface';
 
 @Component({
     selector: 'app-product',
@@ -9,9 +9,9 @@ import { ProductPage } from "../../models/product/Product.interface";
     styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent implements OnInit {
-    public productPageInfo!:ProductPage
+    public productPageInfo!: ProductPage;
 
-    public constructor(private productService: ProductService,  private route: ActivatedRoute,private router: Router) {}
+    public constructor(private productService: ProductService, private route: ActivatedRoute, private router: Router) {}
 
     public async ngOnInit(): Promise<void> {
         this.route.params.subscribe(async (params: Params) => {
@@ -19,9 +19,9 @@ export class ProductComponent implements OnInit {
             const productPageInfo = await this.productService.getProductPageDataById(id);
             if (productPageInfo === -1) {
                 await this.router.navigate(['/landing']);
-                return
+                return;
             }
             this.productPageInfo = productPageInfo;
-        }
+        });
     }
 }

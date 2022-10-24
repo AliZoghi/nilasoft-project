@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
-import {ProductItem} from '../../../models/ProductItem.interface';
+
 import {Router} from '@angular/router';
+import {ProductCard, ProductItem} from '../../../models/product/Product.interface';
 interface MouseEventInterface {
     x: number;
     y: number;
@@ -11,7 +12,7 @@ interface MouseEventInterface {
     styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent {
-    @Input() public productItem!: ProductItem;
+    @Input() public productCard!: ProductCard;
     private mousedownLocation!: MouseEventInterface;
 
     public constructor(private router: Router) {}

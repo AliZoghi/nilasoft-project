@@ -9,7 +9,7 @@ export interface ProductItem {
     enrolledNumber: number;
     time: number;
     level: string;
-    rate: {count: number; averageRate: number};
+    rate: ProductRate;
     price: ProductPrice;
     teacherId: number;
 }
@@ -39,18 +39,23 @@ export interface ProductPage {
     tableData: {fqa: TableFQA[]; descriptions: TableDescription};
     advantages: ProductAdvantageItem[];
     teacher: ProductTeacher;
-    relatedCourses: ProductItem[];
+    relatedCourses: ProductCard[];
 }
 
 export interface ProductPrice {
     onSale: number;
     discount: number;
 }
-// export enum ProductLevelEnum {
-//     beginner = 'beginner',
-//     intermediate = 'intermediate',
-//     advance = 'advance',
-// }
+export enum ProductLevelEnum {
+    beginner = 'beginner',
+    intermediate = 'intermediate',
+    advance = 'advance',
+}
+
+export interface ProductRate {
+    count: number;
+    averageRate: number;
+}
 
 // export const productAdvantageList: ProductAdvantageItem[] = [
 //     {color: 'var(--primary-color-normal)', icon: 'circle-play', label: '12 hours video'},

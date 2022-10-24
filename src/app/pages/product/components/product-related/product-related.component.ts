@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {ProductItem} from '../../../../models/product/Product.interface';
+import {ProductCard, ProductItem} from '../../../../models/product/Product.interface';
 
 @Component({
     selector: 'app-product-related',
@@ -7,5 +7,5 @@ import {ProductItem} from '../../../../models/product/Product.interface';
     styleUrls: ['./product-related.component.scss'],
 })
 export class ProductRelatedComponent {
-    @Input() public productRelated!: ProductItem[];
+    @Input() public productRelated!: ProductCard[];
 }

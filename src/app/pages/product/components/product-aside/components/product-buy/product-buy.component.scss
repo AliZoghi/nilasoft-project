@@ -1,4 +1,5 @@
 .buy {
+    //--video-bg: "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg";
     background-color: var(--gray-color-lightest);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-soft);
@@ -14,7 +15,8 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background-image: url(var(--video-bg));
+            //background-image: url(var(--video-bg));
+            background-image: url("https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg");
             background-position: center;
             background-size: cover;
         }
