@@ -3,17 +3,6 @@
     "data": [
         {
             "id": 1,
-            "information": {
-                "id": 1,
-                "title": "The Python Course: build web application",
-                "summary": "JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.",
-                "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
-                "enrolledNumber": 1200,
-                "time": 150,
-                "level": "intermediate",
-                "rate": {"averageRate": 4.5, "count": 13245},
-                "teacherId": 1
-            },
             "tableData": {
                 "fqa": [
                     {

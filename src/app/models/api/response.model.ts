@@ -1,4 +1,4 @@
-import {ProductCard, ProductComplete} from '../product/Product.interface';
+import {ProductCard, ProductComplete, ProductItem} from '../product/Product.interface';
 import {ProductTeacher, ProductTeacherMinimal} from '../product/ProductTeacher.interface';
 
 export interface ResultRequest {
@@ -10,8 +10,8 @@ export interface ProductsResponse extends ResultRequest {
     data: ProductComplete[];
 }
 
-export interface ProductsCardResponse extends ResultRequest {
-    data: ProductCard[];
+export interface ProductsItemResponse extends ResultRequest {
+    data: ProductItem[];
 }
 
 export interface TeachersResponse extends ResultRequest {
