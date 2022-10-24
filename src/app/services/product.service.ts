@@ -108,7 +108,7 @@ export class ProductService {
     }
 
     public async getRecommendedProduct(): Promise<ProductCard[]> {
-        const recommendedIdsCourse = [1, 1, 1, 1, 1, 1, 1, 1];
+        const recommendedIdsCourse = [1, 2, 3, 4, 5];
         const recommendedCourses = await this.getProductsCardByIds(recommendedIdsCourse);
         return recommendedCourses;
     }
