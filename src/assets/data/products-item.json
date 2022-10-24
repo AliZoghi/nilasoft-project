@@ -4,12 +4,12 @@
         {
             "id": 1,
             "title": "The Python Course: build web application",
-            "summary": "JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.",
-            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
-            "enrolledNumber": 1200,
-            "time": 150,
-            "level": "intermediate",
-            "rate": {"averageRate": 4.5, "count": 13245},
+            "summary": "100 Days of Code: The Complete Python Pro Bootcamp for 2022",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg",
+            "enrolledNumber": 1231,
+            "time": 300,
+            "rate": {"averageRate": 2.1, "count": 1000},
+            "level": "beginner",
             "price": {
                 "onSale": 750,
                 "discount": 50
@@ -18,94 +18,109 @@
         },
         {
             "id": 2,
-            "title": "The Python Course: build web application",
-            "summary": "JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.",
-            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
-            "enrolledNumber": 1200,
-            "time": 150,
-            "level": "intermediate",
-            "rate": {"averageRate": 4.5, "count": 13245},
+            "title": "Learn GraphQL with .Net Core For Absolute Beginners",
+            "summary": "Learn to build Real World Project with GraphQL , .Net Core , Entity Framework Core and C#",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-graphql.jpg",
+            "enrolledNumber": 4123,
+            "time": 109,
+            "rate": {"averageRate": 3.9, "count": 13245},
+            "level": "advance",
             "price": {
-                "onSale": 750,
-                "discount": 0
+                "onSale": 600,
+                "discount": 10
             },
-            "teacherId": 1
+            "teacherId": 2
         },
         {
             "id": 3,
-            "title": "The Python Course: build web application",
-            "summary": "JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.",
-            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
-            "enrolledNumber": 1200,
-            "time": 150,
-            "level": "intermediate",
-            "rate": {"averageRate": 4.5, "count": 13245},
+            "title": "The Complete JavaScript Course 2022: From Zero to Expert!",
+            "summary": "The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-javascript.jpg",
+            "enrolledNumber": 1512,
+            "time": 71,
+            "rate": {"averageRate": 1.7, "count": 1920},
+            "level": "beginner",
             "price": {
-                "onSale": 750,
+                "onSale": 200,
                 "discount": 0
             },
-            "teacherId": 1
+            "teacherId": 3
         },
         {
             "id": 4,
-            "title": "The Python Course: build web application",
-            "summary": "JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.",
-            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
-            "enrolledNumber": 1200,
-            "time": 150,
+            "title": "Build Responsive Real-World Websites with HTML and CSS",
+            "summary": "Learn modern HTML5, CSS3 and web design by building a stunning website for your portfolio! Includes flexbox and CSS Grid",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-css.jpg",
+            "enrolledNumber": 5122,
+            "time": 269,
+            "rate": {"averageRate": 3.6, "count": 2310},
             "level": "intermediate",
-            "rate": {"averageRate": 4.5, "count": 13245},
             "price": {
-                "onSale": 750,
-                "discount": 0
+                "onSale": 121,
+                "discount": 5
             },
-            "teacherId": 1
+            "teacherId": 5
         },
         {
             "id": 5,
-            "title": "The Python Course: build web application",
-            "summary": "JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.",
-            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
-            "enrolledNumber": 1200,
-            "time": 150,
-            "level": "intermediate",
-            "rate": {"averageRate": 4.5, "count": 13245},
+            "title": "Gatsby.js Tutorial and Projects Course",
+            "summary": "Create Blazingly Fast Websites with latest version of Gatsby.js",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-gatsby.jpg",
+            "enrolledNumber": 4126,
+            "time": 175,
+            "rate": {"averageRate": 4.8, "count": 13245},
+            "level": "advance",
             "price": {
-                "onSale": 750,
-                "discount": 0
+                "onSale": 90,
+                "discount": 50
             },
-            "teacherId": 1
+            "teacherId": 7
         },
         {
             "id": 6,
             "title": "The Python Course: build web application",
             "summary": "JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.",
             "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
-            "enrolledNumber": 1200,
-            "time": 150,
-            "level": "intermediate",
-            "rate": {"averageRate": 4.5, "count": 13245},
+            "enrolledNumber": 5251,
+            "time": 210,
+            "rate": {"averageRate": 5, "count": 2310},
+            "level": "advance",
             "price": {
-                "onSale": 750,
-                "discount": 0
+                "onSale": 275,
+                "discount": 15
             },
             "teacherId": 1
         },
 
         {
             "id": 7,
-            "title": "The Python Course: build web application",
-            "summary": "JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript.",
+            "title": "React - The Complete Guide (incl Hooks, React Router, Redux",
+            "summary": "Dive in and learn React.js from scratch! Learn Reactjs, Hooks, Redux, React Routing, Animations, Next.js and way more!",
             "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-react.jpg",
-            "enrolledNumber": 1200,
-            "time": 150,
-            "level": "intermediate",
-            "rate": {"averageRate": 4.5, "count": 13245},
+            "enrolledNumber": 415,
+            "time": 109,
+            "rate": {"averageRate": 3.9, "count": 13245},
+            "level": "advance",
             "price": {
-                "onSale": 750,
+                "onSale": 950,
                 "discount": 0
             },
-            "teacherId": 1
+            "teacherId": 4
+        },
+        {
+            "id": 8,
+            "title": "Wordpress for Beginners - Master Wordpress Quickly",
+            "summary": "In 2022, build a beautiful responsive Wordpress site that looks great on all devices. No experience required.",
+            "image": "https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-wordpress.jpg",
+            "enrolledNumber": 3621,
+            "time": 300,
+            "rate": {"averageRate": 2.1, "count": 1000},
+            "level": "beginner",
+            "price": {
+                "onSale": 940,
+                "discount": 70
+            },
+            "teacherId": 9
         }
     ]
 }

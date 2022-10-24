@@ -29,6 +29,11 @@ export class ProductCardComponent {
     }
 
     private async navigateProduct(id: number): Promise<void> {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
         await this.router.navigate(['/product', id]);
     }
 }

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ApiService} from './api.service';
-import {GET_PRODUCTS, GET_PRODUCTS_ITEM, GET_TEACHERS, GET_TEACHERS_MINIMAL} from '../utils/api.route.utils';
+import {GET_PRODUCTS, GET_PRODUCTS_ITEM, GET_TEACHERS, GET_TEACHERS_MINIMAL} from '../models/api/api.route.utils';
 import {ProductComplete, ProductCard, ProductItem, ProductPage} from '../models/product/Product.interface';
 import {BehaviorSubject} from 'rxjs';
 import {
@@ -129,7 +129,6 @@ export class ProductService {
         const productsCard = await Promise.all(
             productsItem.map(async (product) => {
                 const teacherInformation = await this.getTeacherMinimalById(product.teacherId);
-
                 return {
                     information: product,
                     teacherInformation,
