@@ -1,5 +1,5 @@
 <div class="aside__container">
-    <app-product-buy></app-product-buy>
-    <app-product-advantages></app-product-advantages>
-    <app-product-teacher></app-product-teacher>
+    <app-product-buy [productPriceSection]="productAside.information"></app-product-buy>
+    <app-product-advantages [advantagesList]="productAside.advantages"></app-product-advantages>
+    <app-product-teacher [teacherInfo]="productAside.teacher"></app-product-teacher>
 </div>

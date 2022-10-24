@@ -1,5 +1,5 @@
 import {TableDescription, TableFQA} from './ProductTableData.interface';
-import {ProductTeacherMinimal} from './ProductTeacher.interface';
+import {ProductTeacher, ProductTeacherMinimal} from './ProductTeacher.interface';
 
 export interface ProductItem {
     id: number;
@@ -10,7 +10,7 @@ export interface ProductItem {
     time: number;
     level: string;
     rate: {count: number; averageRate: number};
-
+    price: ProductPrice;
     teacherId: number;
 }
 
@@ -27,13 +27,25 @@ export interface ProductCard {
 
 export interface ProductComplete {
     id: number;
-    information: ProductItem;
-    tableData: {fqa: TableFQA; descriptions: TableDescription};
-    advantages: ProductAdvantageItem;
+    tableData: {fqa: TableFQA[]; descriptions: TableDescription};
+    advantages: ProductAdvantageItem[];
     teacherId: number;
-    relatedCoursesId: [number];
+    relatedCoursesId: number[];
 }
 
+export interface ProductPage {
+    id: number;
+    information: ProductItem;
+    tableData: {fqa: TableFQA[]; descriptions: TableDescription};
+    advantages: ProductAdvantageItem[];
+    teacher: ProductTeacher;
+    relatedCourses: ProductItem[];
+}
+
+export interface ProductPrice {
+    onSale: number;
+    discount: number;
+}
 // export enum ProductLevelEnum {
 //     beginner = 'beginner',
 //     intermediate = 'intermediate',

@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, Input, OnDestroy, ViewChild} from '@angular/core';
-import {ProductItem, ProductItemFake} from '../../../../models/ProductItem.interface';
+import {ProductItem} from '../../../../models/product/Product.interface';
 
 @Component({
     selector: 'app-product-slider',
@@ -8,7 +8,7 @@ import {ProductItem, ProductItemFake} from '../../../../models/ProductItem.inter
 })
 export class ProductSliderComponent implements AfterViewInit, OnDestroy {
     @Input() public sliderTitle!: string;
-    public productItems: ProductItem[] = ProductItemFake;
+    @Input() public productItems!: ProductItem[];
     private readonly INTERVAL_DELAY: number = 4_000;
     private interval!: number;
     @ViewChild('slider') public sliderContainer!: ElementRef;

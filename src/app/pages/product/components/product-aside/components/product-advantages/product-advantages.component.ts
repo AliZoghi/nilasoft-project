@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {ProductAdvantageItem, productAdvantageList} from '../../../../../../models/product/Product.interface';
+import {Component, Input} from '@angular/core';
+import {ProductAdvantageItem} from '../../../../../../models/product/Product.interface';
 
 @Component({
     selector: 'app-product-advantages',
@@ -7,5 +7,5 @@ import {ProductAdvantageItem, productAdvantageList} from '../../../../../../mode
     styleUrls: ['./product-advantages.component.scss'],
 })
 export class ProductAdvantagesComponent {
-    public advantagesList: ProductAdvantageItem[] = productAdvantageList;
+    @Input() public advantagesList!: ProductAdvantageItem[];
 }

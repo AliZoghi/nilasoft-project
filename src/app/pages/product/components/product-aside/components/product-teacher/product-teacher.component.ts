@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {productTeacherInfo, ProductTeacherInfo} from '../../../../../../models/product/Product.interface';
+import {Component, Input} from '@angular/core';
+import {ProductTeacher} from '../../../../../../models/product/ProductTeacher.interface';
 
 @Component({
     selector: 'app-product-teacher',
@@ -7,5 +7,5 @@ import {productTeacherInfo, ProductTeacherInfo} from '../../../../../../models/p
     styleUrls: ['./product-teacher.component.scss'],
 })
 export class ProductTeacherComponent {
-    public teacherInfo: ProductTeacherInfo = productTeacherInfo;
+    @Input() public teacherInfo!: ProductTeacher;
 }

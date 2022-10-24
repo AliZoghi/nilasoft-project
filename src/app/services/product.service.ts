@@ -1,16 +1,9 @@
 import {Injectable} from '@angular/core';
 import {ApiService} from './api.service';
-import {
-    GET_PRODUCTS,
-    GET_PRODUCTS_CARD,
-    GET_PRODUCTS_ITEM,
-    GET_TEACHERS,
-    GET_TEACHERS_MINIMAL,
-} from '../utils/api.route.utils';
-import {ProductComplete, ProductCard, ProductItem} from '../models/product/Product.interface';
+import {GET_PRODUCTS, GET_PRODUCTS_ITEM, GET_TEACHERS, GET_TEACHERS_MINIMAL} from '../utils/api.route.utils';
+import {ProductComplete, ProductCard, ProductItem, ProductPage} from '../models/product/Product.interface';
 import {BehaviorSubject} from 'rxjs';
 import {
-    ProductsCardResponse,
     ProductsItemResponse,
     ProductsResponse,
     TeachersMinimalResponse,
@@ -24,21 +17,25 @@ import {ProductTeacher, ProductTeacherMinimal} from '../models/product/ProductTe
 export class ProductService {
     public constructor(private apiService: ApiService) {}
 
-    public productsSubject = new BehaviorSubject<ProductComplete[]>([]);
-    public productsItemSubject = new BehaviorSubject<ProductItem[]>([]);
-    public teachersSubject = new BehaviorSubject<ProductTeacher[]>([]);
-    public teachersMinimalSubject = new BehaviorSubject<ProductTeacherMinimal[]>([]);
+    private productsSubject = new BehaviorSubject<ProductComplete[]>([]);
+    private productsItemSubject = new BehaviorSubject<ProductItem[]>([]);
+    private teachersSubject = new BehaviorSubject<ProductTeacher[]>([]);
+    private teachersMinimalSubject = new BehaviorSubject<ProductTeacherMinimal[]>([]);
 
-    public get allProducts(): ProductComplete[] {
+    public currentProductPageSubject = new BehaviorSubject<ProductComplete | null>(null);
+    public productsRecommended: ProductItem[] = [];
+    public productsPopular: ProductItem[] = [];
+
+    private get allProducts(): ProductComplete[] {
         return this.productsSubject.value;
     }
-    public get allProductsItem(): ProductItem[] {
+    private get allProductsItem(): ProductItem[] {
         return this.productsItemSubject.value;
     }
-    public get allTeachers(): ProductTeacher[] {
+    private get allTeachers(): ProductTeacher[] {
         return this.teachersSubject.value;
     }
-    public get allTeachersMinimal(): ProductTeacherMinimal[] {
+    private get allTeachersMinimal(): ProductTeacherMinimal[] {
         return this.teachersMinimalSubject.value;
     }
 
@@ -64,10 +61,10 @@ export class ProductService {
             this.teachersMinimalSubject.next(teachersMinimalResponse.data);
     }
 
-    public async getProductById(id: number): Promise<ProductComplete> {
+    public async getProductById(id: number): Promise<ProductComplete | -1> {
         const product = this.allProducts.find((product: any) => product.id === id) as ProductComplete;
 
-        return product;
+        return product && -1;
     }
 
     public async getProductItemById(id: number): Promise<ProductItem> {
@@ -88,5 +85,48 @@ export class ProductService {
         ) as ProductTeacherMinimal;
 
         return teacherMinimal;
+    }
+
+    public async getProductPageDataById(id: number): Promise<ProductPage | -1> {
+        const product = await this.getProductById(id);
+        if (product === -1) return -1;
+
+        this.currentProductPageSubject.next(product);
+        const productInfo = await this.getProductItemById(id);
+        const relatedCourses: ProductItem[] = await this.getProductsByIds(product.relatedCoursesId);
+
+        const teacher = await this.getTeacherById(product.teacherId);
+        const productPageData: ProductPage = {
+            id: product.id,
+            tableData: product.tableData,
+            advantages: product.advantages,
+            information: productInfo,
+            relatedCourses,
+            teacher,
+        };
+
+        return productPageData;
+    }
+
+    public async getRecommendedProduct(): Promise<ProductItem[]> {
+        const recommendedIdsCourse = [1, 2, 4, 6, 9, 3];
+        const recommendedCourses = await this.getProductsByIds(recommendedIdsCourse);
+        return recommendedCourses;
+    }
+
+    public async getPopularProduct(): Promise<ProductItem[]> {
+        const popularIdsCourse = this.allProductsItem
+            .sort((a, b) => b.rate.averageRate - a.rate.averageRate)
+            .map((product) => product.id)
+            .slice(0, 4);
+
+        const popularProducts = await this.getProductsByIds(popularIdsCourse);
+        return popularProducts;
+    }
+
+    // UTILITY
+    private async getProductsByIds(ids: number[]): Promise<ProductItem[]> {
+        const products = await Promise.all(ids.map(async (id) => await this.getProductItemById(id)));
+        return products;
     }
 }

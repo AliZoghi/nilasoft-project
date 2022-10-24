@@ -1,6 +1,6 @@
 <div class="buy">
     <div class="buy__video">
-        <div class="buy__video-image"></div>
+        <div class="buy__video-image" [style.--video-bg]="productPriceSection.image"></div>
         <app-dynamic-icon
             iconShape="play"
             iconColor="var(--primary-color-normal)"
@@ -13,8 +13,8 @@
     </div>
     <div class="buy__description">
         <div class="buy__price">
-            <span>${{ 600 }}</span>
-            <del>${{ 750 }}</del>
+            <span>${{ productPriceSection.price.onSale }}</span>
+            <del>${{ productPriceSection.price.discount }}</del>
         </div>
         <div class="buy__buttons">
             <app-dynamic-button

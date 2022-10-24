@@ -1,14 +1,14 @@
-<app-product-description></app-product-description>
+<app-product-description [productInfo]="productPageInfo.information"></app-product-description>
 <div class="container">
     <main>
         <section>
             <app-product-table-content></app-product-table-content>
         </section>
         <aside>
-            <app-product-aside></app-product-aside>
+            <app-product-aside [productAside]="productPageInfo"></app-product-aside>
         </aside>
         <article>
-            <app-product-related></app-product-related>
+            <app-product-related [productRelated]="productPageInfo.relatedCourses"></app-product-related>
         </article>
     </main>
 </div>

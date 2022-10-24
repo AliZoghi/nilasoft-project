@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {ProductItem, ProductItemFake} from '../../../../models/ProductItem.interface';
+import {Component, Input} from '@angular/core';
+import {ProductItem} from '../../../../models/product/Product.interface';
 
 @Component({
     selector: 'app-product-related',
@@ -7,5 +7,5 @@ import {ProductItem, ProductItemFake} from '../../../../models/ProductItem.inter
     styleUrls: ['./product-related.component.scss'],
 })
 export class ProductRelatedComponent {
-    public productRelated: ProductItem[] = ProductItemFake;
+    @Input() public productRelated!: ProductItem[];
 }

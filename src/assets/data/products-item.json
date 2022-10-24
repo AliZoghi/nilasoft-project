@@ -10,6 +10,10 @@
             "time": 150,
             "level": "intermediate",
             "rate": {"averageRate": 4.5, "count": 13245},
+            "price": {
+                "onSale": 750,
+                "discount": 0
+            },
             "teacherId": 1
         },
         {
@@ -21,6 +25,10 @@
             "time": 150,
             "level": "intermediate",
             "rate": {"averageRate": 4.5, "count": 13245},
+            "price": {
+                "onSale": 750,
+                "discount": 0
+            },
             "teacherId": 1
         },
         {
@@ -32,6 +40,10 @@
             "time": 150,
             "level": "intermediate",
             "rate": {"averageRate": 4.5, "count": 13245},
+            "price": {
+                "onSale": 750,
+                "discount": 0
+            },
             "teacherId": 1
         },
         {
@@ -43,6 +55,10 @@
             "time": 150,
             "level": "intermediate",
             "rate": {"averageRate": 4.5, "count": 13245},
+            "price": {
+                "onSale": 750,
+                "discount": 0
+            },
             "teacherId": 1
         }
     ]
